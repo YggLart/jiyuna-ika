@@ -1,0 +1,60 @@
+.title {
+    position: relative;
+    top: 42vh;
+    padding: 2rem;
+    color: rgb( var(--clr-white) );
+}
+
+.title h1 {
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 8rem);
+}
+
+.title h2 {
+    margin: 0;
+    font-size: clamp(1rem, 5vw, 4rem);
+}
+
+.title .box {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
+.title .discord {
+    align-items: center;
+    justify-content: center;
+}
+
+.discord .button {
+    display: block;
+    padding: 2rem 4rem;
+    cursor: pointer;
+
+    letter-spacing: 2px;
+    font-size: clamp(1rem, 5vw, 3rem);
+
+    color: rgb( var(--clr-white) );
+    background-color: rgba(88, 105, 234, 1);
+    border-radius: 999rem;
+}
+
+.fa-arrow-down {
+    position: absolute;
+    bottom: 2rem;
+    right: 0; left: 0;
+    margin-left: auto; 
+    margin-right: auto;
+    opacity: .2;
+    padding: 1rem;
+    width: 2rem;
+    
+    font-size: 2rem;
+    color:rgb( var(--clr-white) );
+    outline: solid 1px rgb( var(--clr-white) );
+    border-radius: 100%;
+}
+
+.fa-arrow-down {
+
+}

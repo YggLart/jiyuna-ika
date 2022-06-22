@@ -1,0 +1,44 @@
+.hero-img { 
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -10;
+
+    width: 100vw;
+    height: 80vh;
+
+    background-image: url("../img/screenshots/fotos/2022/eventos/Make it Rika/01.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-img::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100vw; height: 30vh;
+    z-index: -9;
+
+    background: rgb(14,14,16);
+    background: linear-gradient(180deg, rgba(14,14,16,0) 0%, rgba(14,14,16,0.4990371148459384) 50%, rgba(14,14,16,1) 100%);
+}
+
+.hero-description {
+    position: absolute;
+    top: 9rem;
+    right: 30%;
+    padding-right: 1rem;
+
+    text-transform: uppercase;
+    line-height: 5px;
+    text-align: right;
+    letter-spacing: 2px;
+    font-weight: 500;
+
+    border-right: solid 2px rgb( var(--clr-primary) );
+
+    color: rgb( var(--clr-white) );
+}
+
+.hero-description p:first-child {
+    font-weight: 100;
+}
