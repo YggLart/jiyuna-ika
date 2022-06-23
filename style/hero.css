@@ -24,18 +24,15 @@
 
 .hero-description {
     position: absolute;
-    top: 9rem;
-    right: 30%;
+    top: 7rem;
+    right: 5%;
     padding-right: 1rem;
-
     text-transform: uppercase;
     line-height: 5px;
     text-align: right;
     letter-spacing: 2px;
     font-weight: 500;
-
     border-right: solid 2px rgb( var(--clr-primary) );
-
     color: rgb( var(--clr-white) );
 }
 
