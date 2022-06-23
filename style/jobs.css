@@ -65,23 +65,23 @@
     transition: .2s;
 }
 
-.job.war { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/WAR.jpg"); }
-.job.pld { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/PLD.jpg"); }
-.job.drk { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/DRK.jpg"); }
-.job.gnb { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/GNB.jpg"); }
-.job.whm { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/WHM.jpg"); }
-.job.sch { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/SCH.jpg"); }
-.job.ast { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/AST.jpg"); }
-.job.sge { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/SAGE.jpg"); }
-.job.drg { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/DRG.jpg"); }
-.job.mnk { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/MNK.jpg"); }
-.job.nin { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/NIN.jpg"); }
-.job.sam { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/SAM.jpg"); }
-.job.rpr { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/REAPER.jpg"); }
-.job.brd { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/BRD.jpg"); }
-.job.mch { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/MCH.jpg"); }
-.job.dnc { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/DNC.jpg"); }
-.job.blm { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/BLM.jpg"); }
-.job.smn { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/SMN.jpg"); }
-.job.rdm { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/RDM.jpg"); }
-.job.blu { background-image: url("https://github.com/YggLart/jiyuna-ika/blob/main/img/system/jobs/BLU.jpg"); }
+.job.war { background-image: url("../img/system/jobs/war.jpg"); }
+.job.pld { background-image: url("../img/system/jobs/pld.jpg"); }
+.job.drk { background-image: url("../img/system/jobs/drk.jpg"); }
+.job.gnb { background-image: url("../img/system/jobs/gnb.jpg"); }
+.job.whm { background-image: url("../img/system/jobs/whm.jpg"); }
+.job.sch { background-image: url("../img/system/jobs/sch.jpg"); }
+.job.ast { background-image: url("../img/system/jobs/ast.jpg"); }
+.job.sge { background-image: url("../img/system/jobs/sge.jpg"); }
+.job.drg { background-image: url("../img/system/jobs/drg.jpg"); }
+.job.mnk { background-image: url("../img/system/jobs/mnk.jpg"); }
+.job.nin { background-image: url("../img/system/jobs/nin.jpg"); }
+.job.sam { background-image: url("../img/system/jobs/sam.jpg"); }
+.job.rpr { background-image: url("../img/system/jobs/rpr.jpg"); }
+.job.brd { background-image: url("../img/system/jobs/brd.jpg"); }
+.job.mch { background-image: url("../img/system/jobs/mch.jpg"); }
+.job.dnc { background-image: url("../img/system/jobs/dnc.jpg"); }
+.job.blm { background-image: url("../img/system/jobs/blm.jpg"); }
+.job.smn { background-image: url("../img/system/jobs/smn.jpg"); }
+.job.rdm { background-image: url("../img/system/jobs/rdm.jpg"); }
+.job.blu { background-image: url("../img/system/jobs/blu.jpg"); }
