@@ -65,23 +65,23 @@
     transition: .2s;
 }
 
-.job.war { background-image: url("../img/system/jobs/war.png"); }
-.job.pld { background-image: url("../img/system/jobs/pld.png"); }
-.job.drk { background-image: url("../img/system/jobs/drk.png"); }
-.job.gnb { background-image: url("../img/system/jobs/gnb.png"); }
-.job.whm { background-image: url("../img/system/jobs/whm.png"); }
-.job.sch { background-image: url("../img/system/jobs/sch.png"); }
-.job.ast { background-image: url("../img/system/jobs/ast.png"); }
-.job.sge { background-image: url("../img/system/jobs/sge.png"); }
-.job.drg { background-image: url("../img/system/jobs/drg.png"); }
-.job.mnk { background-image: url("../img/system/jobs/mnk.png"); }
-.job.nin { background-image: url("../img/system/jobs/nin.png"); }
-.job.sam { background-image: url("../img/system/jobs/sam.png"); }
-.job.rpr { background-image: url("../img/system/jobs/rpr.png"); }
-.job.brd { background-image: url("../img/system/jobs/brd.png"); }
-.job.mch { background-image: url("../img/system/jobs/mch.png"); }
-.job.dnc { background-image: url("../img/system/jobs/dnc.png"); }
-.job.blm { background-image: url("../img/system/jobs/blm.png"); }
-.job.smn { background-image: url("../img/system/jobs/smn.png"); }
-.job.rdm { background-image: url("../img/system/jobs/rdm.png"); }
-.job.blu { background-image: url("../img/system/jobs/blu.png"); }
+.job.war { background-image: url("../img/system/jobs/war.jpg"); }
+.job.pld { background-image: url("../img/system/jobs/pld.jpg"); }
+.job.drk { background-image: url("../img/system/jobs/drk.jpg"); }
+.job.gnb { background-image: url("../img/system/jobs/gnb.jpg"); }
+.job.whm { background-image: url("../img/system/jobs/whm.jpg"); }
+.job.sch { background-image: url("../img/system/jobs/sch.jpg"); }
+.job.ast { background-image: url("../img/system/jobs/ast.jpg"); }
+.job.sge { background-image: url("../img/system/jobs/sge.jpg"); }
+.job.drg { background-image: url("../img/system/jobs/drg.jpg"); }
+.job.mnk { background-image: url("../img/system/jobs/mnk.jpg"); }
+.job.nin { background-image: url("../img/system/jobs/nin.jpg"); }
+.job.sam { background-image: url("../img/system/jobs/sam.jpg"); }
+.job.rpr { background-image: url("../img/system/jobs/rpr.jpg"); }
+.job.brd { background-image: url("../img/system/jobs/brd.jpg"); }
+.job.mch { background-image: url("../img/system/jobs/mch.jpg"); }
+.job.dnc { background-image: url("../img/system/jobs/dnc.jpg"); }
+.job.blm { background-image: url("../img/system/jobs/blm.jpg"); }
+.job.smn { background-image: url("../img/system/jobs/smn.jpg"); }
+.job.rdm { background-image: url("../img/system/jobs/rdm.jpg"); }
+.job.blu { background-image: url("../img/system/jobs/blu.jpg"); }
