@@ -48,7 +48,8 @@ h2 span {
 .staff-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: .5rem;
     flex-wrap: wrap;
     width: 800px;
     margin: 0 auto;
@@ -81,15 +82,56 @@ h2 span {
 
 .staff .role img {
     margin-right: .3rem;
+    width: 20px; height: 20px;
 }
 
 .staff .profile-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     max-width: 6rem;
     border-radius: 1rem;
+    overflow: hidden;
     
     outline: solid 1px rgb( var(--clr-secondary), 0 );
 
     transition: .3s;
+}
+.staff .profile-pic img {height: 100px;}
+
+.staff .profile-pic::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    right: 11px;
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+
+    background-image: url('../img/system/favicon/0_raw.svg');
+    background-size: cover;
+
+    transition: .3s;
+    
+}
+
+.staff .profile-pic::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    border-radius: 50%;
+
+    outline: solid 5px rgb( var(--clr-black), .8 );
+    background-color: rgb( var(--clr-black), .8 );
+    background-size: cover;
+
+    transition: .3s;
+    
 }
 
 .staff .name p { margin: 0; }
@@ -112,6 +154,10 @@ h2 span {
 
 .staff:hover .profile-pic {
     outline: solid 1px rgb( var(--clr-secondary), 1 );
+}
+
+.staff:hover .profile-pic::after, .staff:hover .profile-pic::before {
+    opacity: 1;
 }
 
 .description.ikasona {
