@@ -12,17 +12,20 @@
 
 html, body {
     font-family: var(--ff-sans);
-    background-color: rgb( var(--clr-dark) );
     color: rgb( var(--clr-white) );
     margin: 0;
 }
 
+body {
+    margin: 0;
+    background-color: rgb( var(--clr-dark) );
+}
 .body-shadow {
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0; left: 0;
-    z-index: 0;
+    z-index: -1;
     
     box-shadow: inset 0 0 8rem rgb( var(--clr-black) );
 }
@@ -41,48 +44,6 @@ a {
 a:hover {
     color: rgb( var(--clr-secondary) );
     transform: translateY(-3px);
-}
-
-.post-img img {
-    border-radius: 1rem;
-    outline: solid 1px rgb( var(--clr-secondary), 0 );
-    width: 100%;
-
-    transition: .4s;
-}
-
-.post-img {
-    position: relative;
-    margin: 0 auto;
-    width: 1280px;
-
-    transition: .4s;
-}
-
-.post-img .description {
-    position: absolute;
-    bottom: 1rem; right: 1rem;
-    padding: .3rem .8rem;
-    border-radius: 999rem;
-    opacity: 0;
-
-    letter-spacing: 1px;
-    background-color: rgb( var(--clr-dark), .8 );
-    
-    transition: .4s;
-}
-
-.post-img:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 10px 10px rgb( var(--clr-black), .6 );
-}
-
-.post-img:hover img {
-    outline: solid 1px rgb( var(--clr-secondary), 1 );
-}
-
-.post-img:hover .description {
-    opacity: 1;
 }
 
 
