@@ -4,18 +4,6 @@
     margin: 0 auto;
 }
 
-.about h2 {
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size: clamp(2rem, 5vw, 5rem);
-    letter-spacing: 2px;
-}
-
-h2 span {
-    color: rgb( var(--clr-primary) );
-    font-weight: 600;
-}
-
 .text-container {
     margin: 2rem auto;
     max-width: 800px;

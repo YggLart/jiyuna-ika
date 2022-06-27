@@ -1,0 +1,21 @@
+.fotos-gallery {
+    padding: 2rem;
+}
+
+.fotos-gallery .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.fotos-gallery .container a {
+    max-width: 24%;
+}
+
+.fotos-gallery .container a .foto {
+    max-width: 100%;
+    border-radius: 1rem;
+}
