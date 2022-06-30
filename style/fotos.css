@@ -1,13 +1,14 @@
 .fotos {
     padding: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .galleries {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .gallery {
