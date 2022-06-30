@@ -174,13 +174,13 @@ window.onhashchange = checkHash;
 checkHash();
 
 function checkHash() {
-  var home = document.getElementById('home');
+  var hero = document.getElementById('hero');
 
   //Check if the hash is empty
   if (window.location.hash.substring(1) == '') {
-    home.style.display = 'block';
+    hero.style.display = 'block';
   } else {
-    home.style.display = 'none';
+    hero.style.display = 'none';
   }
 }
 

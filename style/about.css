@@ -196,9 +196,6 @@
     outline: solid 1px rgb( var(--clr-secondary), 1 );
 }
 
-.post-img:hover img {
-}
-
 .post-img:hover .description {
     opacity: 1;
 }
