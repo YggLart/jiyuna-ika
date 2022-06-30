@@ -1,9 +1,50 @@
-.group-img { position: relative; max-width: 1280px; margin: 0 auto; transform: translateY(0); transition: .4s; }
-.group-img img { width: 100%; border-radius: 1rem; outline: solid 1px rgb( var(--clr-secondary), 0 ); transition: .4s; }
+.group-img { position: relative; max-width: 1280px; border-radius: 1rem; margin: 3rem auto; transform: translateY(0); transition: .4s; }
+.group-img img { width: 100%; border-radius: 1rem; outline: solid 1px rgb( var(--clr-secondary), 0 ); overflow: hidden; transition: .4s; }
 
-.duty-info { opacity: 0; display: flex; align-items: center; position:absolute; padding: .5rem 2rem; border-radius: 999rem; font-size: 2rem; background-color: rgb( var(--clr-black), .8 ); backdrop-filter: blur(5px); transition: .4s; }
-.duty-info .name { padding: 0 1rem 0 0; margin: 0;  font-weight: 200; letter-spacing: 3px; }
-.duty-info .level { padding: 0; margin: 0; font-weight: 600; letter-spacing: 2px; text-align: right;}
+.duty-info {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transition: .4s;
+}
+
+.duty-info .name {
+    padding: .5rem 2rem;
+    border-radius: 999rem;
+    margin: 0;
+
+    font-weight: 200;
+    letter-spacing: 3px;
+    font-size: 2rem;
+
+    background-color: rgb(var(--clr-black), .8);
+    backdrop-filter: blur(5px);
+}
+
+.duty-info .duty-level {
+    position: relative;
+    padding: .5rem 1rem;
+    margin: 0 0 0 1rem;
+    border-radius: 999rem;
+
+    font-size: .7rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: right;
+    text-transform: uppercase;
+
+    color: rgb(var(--clr-white), .5);
+    background-color: rgb(var(--clr-black), .8);
+    backdrop-filter: blur(5px);
+}
+
+.duty-info .duty-level.savage {
+    color: rgb( var(--clr-primary) );
+    font-weight: 600;
+    outline: solid 1px rgb( var(--clr-primary) );
+}
+
 .duty-info.position-1 { bottom: 1rem; left: 1rem; }
 
 .group-img .date { opacity: 0; position: absolute; padding: 1rem; border-radius: 999rem; letter-spacing: 2px; background:rgb( var(--clr-black), .8 ); backdrop-filter: blur(5px); transition: .4s;}
@@ -65,6 +106,10 @@
     transition: .2s;
 }
 
+
+/* ------------------------------------------- */
+/* job icons                                   */
+/* ------------------------------------------- */
 .job.war { background-image: url("../img/system/jobs/war.jpg"); }
 .job.pld { background-image: url("../img/system/jobs/pld.jpg"); }
 .job.drk { background-image: url("../img/system/jobs/drk.jpg"); }
@@ -85,6 +130,7 @@
 .job.smn { background-image: url("../img/system/jobs/smn.jpg"); }
 .job.rdm { background-image: url("../img/system/jobs/rdm.jpg"); }
 .job.blu { background-image: url("../img/system/jobs/blu.jpg"); }
+
 
 @media (max-width: 850px) {
     .group-img {
@@ -126,4 +172,107 @@
         min-width: 200px;
     }
 
+}
+
+
+
+/* ------------------------------------------- */
+/* biscoito covers                             */
+/* ------------------------------------------- */
+.biscoito-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.biscoito-cover {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    border-radius: 1rem;
+    width: 240px;
+    height: 80vh;
+    text-align: center;
+    text-transform: uppercase;
+
+    outline: var(--outline);
+    background-position: center;
+    background-size: cover;
+
+    transition: .5s;
+}
+
+.biscoito-cover a { color:rgb(var(--clr-white) ); font-weight: 400; }
+
+.biscoito-cover:hover {
+    width: 500px;
+}
+
+.biscoito-cover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: rgb( var(--clr-black), .6 );
+    transition: .5s;
+}
+
+.biscoito-cover:hover::after {
+    background: rgb( var(--clr-black), .2 );
+}
+
+.biscoito-cover h5, a {
+    font-weight: 400;
+    z-index: 1;
+}
+
+.biscoito-cover.arr { background-image: url('../img/system/biscoito/bg-arr.jpg'); }
+.biscoito-cover.hw { background-image: url('../img/system/biscoito/bg-hw.jpg'); }
+.biscoito-cover.sb { background-image: url('../img/system/biscoito/bg-sb.jpg'); }
+.biscoito-cover.shb { background-image: url('../img/system/biscoito/bg-shb.jpg'); }
+.biscoito-cover.ew { background-image: url('../img/system/biscoito/bg-ew.jpg'); }
+
+.biscoito-cover h5 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 200;
+    transition: .5s;
+}
+
+.biscoito-cover:hover h5 {
+    font-size: 2rem;
+}
+
+.biscoito-cover .button {
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+
+    width: 60%;
+    border-radius: .5rem;
+    letter-spacing: 2px;
+
+    outline: solid 1px rgb(var(--clr-white), .5);
+    background-color: rgb( var(--clr-black), .3 );
+    backdrop-filter: blur(0);
+
+    transition: .3s;
+}
+
+.biscoito-cover .button:hover {
+    letter-spacing: 6px;
+
+    color: rgb( var(--clr-secondary) );
+    outline: solid 1px rgb(var(--clr-secondary));
+    background-color: rgb( var(--clr-black), .6 );
+    backdrop-filter: blur(3px);
+}
+
+.biscoito-cover .button:last-child {
+    margin-bottom: 2rem;
 }

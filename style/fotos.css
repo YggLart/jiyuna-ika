@@ -84,3 +84,143 @@
     color: rgb( var(--clr-secondary));
     outline: solid 1px rgb( var(--clr-secondary)); 
 }
+
+.featured-container {
+    position: relative;
+    display: flex;
+    height: 500px;
+    margin-bottom: 5rem;
+}
+
+.featured {
+    min-width: 70%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+
+    outline: solid 1px rgb( var(--clr-black), .5 );
+    background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 0 rgb( var(--clr-black), .5 );
+
+    transition: .3s;
+}
+
+.featured::after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0; bottom: 0;
+    z-index: 0;
+
+    background: rgb(14,14,16);
+    background: linear-gradient(180deg, rgba(14,14,16,0) 0%, rgba(14,14,16,0.4) 50%, rgba(14,14,16,.8) 100%);
+}
+
+.featured:hover {
+    transform:translateY(-10px);
+
+    outline: solid 1px rgb( var(--clr-secondary) );
+    color: rgb( var(--clr-secondary) );
+    box-shadow: 0 10px 10px rgb( var(--clr-black), .2 );
+}
+
+.feat-tag {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.feat-tag h5 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.feat-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    width: 24%;
+}
+
+.feat-side::after {
+    position: absolute;
+    left: 0; right: 0;
+    margin: 0 auto;
+}
+
+.feat-first, .feat-second, .feat-third, .feat-fourth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 115px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb( var(--clr-white), .5 );
+
+    outline: solid 1px rgb( var(--clr-black), .5 );
+    background-position: center;
+    background-size: cover;
+
+    transition: .3s;
+}
+
+.feat-first p, .feat-second p, .feat-third p, .feat-fourth p {
+    z-index: 1;
+}
+
+.feat-first::after, .feat-second::after, .feat-third::after, .feat-fourth::after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb( var(--clr-black), .5 );
+    backdrop-filter: blur(3px);
+    transition: .3s;
+}
+
+.feat-first:hover, .feat-second:hover, .feat-third:hover, .feat-fourth:hover {
+    letter-spacing: 1rem;
+    color: rgb( var(--clr-secondary), 1 );
+
+    outline: solid 1px rgb( var(--clr-secondary) );
+
+    
+    transform:translateY(-10px);
+    box-shadow: 0 10px 10px rgb( var(--clr-black), .2 );
+}
+
+.feat-first:hover::after,
+.feat-second:hover::after,
+.feat-third:hover::after,
+.feat-fourth:hover::after {
+    background-color: rgb( var(--clr-black), .2 );
+    backdrop-filter: blur(1px);
+}
+
+.feat-first { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
+.feat-second { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
+.feat-third { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
+.feat-fourth { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }

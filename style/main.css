@@ -3,13 +3,19 @@
     /* colors */
     --clr-black: 0, 0, 0;
     --clr-white: 255, 255, 255;
-    --clr-dark: 14, 14, 16;
+    --clr-dark: 29, 29, 29;
     --clr-light: 242, 242, 242;
     --clr-primary: 200, 27, 16 ;
     --clr-secondary: 251, 208, 22 ;
 
     /* font-family */
     --ff-sans: 'Roboto', sans-serif;
+
+    /* styles */
+    --box-shadow: 0 0 0 rgb( var(--clr-black), .3 );
+    --box-shadow-hvr: 0 10px 10px rgb( var(--clr-black), .3 );
+    --outline: solid 1px rgb( var(--clr-black), .5 );
+    --outline-hvr: solid 1px rgb( var(--clr-secondary) );
 }
 
 /* html & body */
@@ -67,6 +73,25 @@ h2 span {
     font-weight: 600;
 }
 
+h3 {
+    position: relative;
+    margin: 0;
+    padding: 5rem 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+
+    color:rgb( var(--clr-primary) );
+}
+
+h4 {
+    margin-top: -3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 5px;
+    color:rgb( var(--clr-white), .5 )
+}
 /* ----------------------------------------- */
 /* custom tags ----------------------------- */
 /* ----------------------------------------- */
@@ -131,3 +156,29 @@ h2 span {
 
 /* width */
 .w-80 { width: 80%; }
+
+
+/* ----------------------------------------- */
+/* custom layout --------------------------- */
+/* ----------------------------------------- */
+.section { display: none; }
+.section:target { display: block !important; }
+
+.page {
+    padding: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.page h2:first-child {
+    padding-top: 5rem;
+}
+
+
+
+
+@media (max-width: 800px) {
+    h2, h3, h4, h5 {
+        text-align: center;
+    }
+}

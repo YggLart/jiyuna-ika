@@ -18,7 +18,11 @@
     <!-- css : main --> <link rel="stylesheet" href="style/main.css">
     <!-- css : navbar --> <link rel="stylesheet" href="style/navbar.css">
     <!-- css : hero --> <link rel="stylesheet" href="style/hero.css">
+    <!-- css : about --> <link rel="stylesheet" href="style/about.css">
+    <!-- css : jobs --> <link rel="stylesheet" href="style/jobs.css">
     <!-- css : fotos --> <link rel="stylesheet" href="style/fotos.css">
+    <!-- css : fotos-gallery --> <link rel="stylesheet" href="style/fotos-gallery.css">
+    <!-- css : footer --> <link rel="stylesheet" href="style/footer.css">
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/system/favicon/apple-touch-icon.png">
@@ -45,25 +49,26 @@
 <body>
 
     <!-- navbar : start-->
-    <nav class="navbar">
+    <nav>
+        <div class="nav-container">
+            <span class="main-logo"><a href="#hero"> <img src="img/system/jiyuna-ika-logo.svg" alt=""> </a></span>
 
-        <span class="main-logo"><a href="index.html"> <img src="img/system/jiyuna-ika-logo.svg" alt=""> </a></span>
-
-        <div class="nav-links" id="nav-links">
-                <a href="sobre.html">sobre</a>
-                <a href="fotos.html">fotos</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">sobre</a>
+                <a href="#fotos">fotos</a>
                 <a href="#biscoito">biscoito</a>
                 <a href="#censo">censo</a>
+            </div>
         </div>
 
         <div class="menu-icon" onclick="responsiveMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
     <!-- navbar : end-->
 
-    <!-- hero : start -->
     <div class="body-shadow"></div>
     
-    <div class="hero-container">
+    <!-- hero : start -->
+    <section id="hero" class="section hero-container">
         <div class="hero-img">
             <div class="hero-description">
                 <p>evento</p>
@@ -72,19 +77,399 @@
             </div>
         </div>
 
-    <div class="title">
-        <div class="box">
-            <h1 class="fw-100">jiyuna ika</h1>
-            <h2>a free company <span class="clr-primary">mais comunista</span> de eorzea</h2>
+        <div class="title">
+            <div class="box">
+                <h1 class="fw-100">jiyuna ika</h1>
+                <h2>a free company <span class="clr-primary">mais comunista</span> de eorzea</h2>
+            </div>
+            <div class="box discord">
+                <p class="ltr-space-2">Entre no nosso servidor!</p>
+                <a href="https://discord.com/invite/Chkuky8Ugp">
+                    <div class="button"> discord <i class="fa-brands fa-discord"></i></div>
+                </a>
+            </div>
         </div>
-        <div class="box discord">
-            <p class="ltr-space-2">Entre no nosso servidor!</p>
-            <a href="https://discord.com/invite/Chkuky8Ugp"><div class="button">  discord <i class="fa-brands fa-discord"></i></div></a>
-        </div>
-    </div>
+    </section>
     <!-- hero : end -->
 
-</div>
+
+    <!-- about : start -->
+    <section id="about" class="section page">
+        <h2><span>sobre</span> a jiyuna ika</h2>
+
+        <div class="post-img"><img src="img/screenshots/fotos/2020/casamento/01.jpg" alt="">
+            <div class="description">
+                Casamento de Kali Weiss & Aidhm Cheart
+            </div>
+        </div>
+
+        <div class="text-container">
+            <p>Criada no dia 01/11/2019, a Ika foi fundada por <a href="https://twitter.com/tengumaru">@tengumaru</a>, <a href="https://twitter.com/Megazao">@megazao</a> e <a href="https://twitter.com/kblosnack">@kblosnack</a> com intuito de juntar pessoas interessadas em fazer <a href="https://ffxiv.consolegameswiki.com/wiki/The_Binding_Coil_of_Bahamut">Coil of Bahamut</a>.</p>
+        </div>
+
+        <div class="group-img">
+            <img src="img/screenshots/fotos/2020/raid/bahamut01.png" alt="">
+            <div class="duty-info position-1">
+                <p class="name">Second Coil of Bahamut - Turn 9</p>
+                <p class="duty-level">Normal</p>
+            </div>
+            <div class="date position-1">16/06/2020</div>
+            <div class="party-info position-1">
+                <a href=""><div class="member"><div class="job war small"></div>Ryodan Onoko</div></a>
+                <a href=""><div class="member"><div class="job pld small"></div>Kuro Brson</div></a>
+                <a href=""><div class="member"><div class="job whm small"></div>Nyar Dodix</div></a>
+                <a href=""><div class="member"><div class="job ast small"></div>Lilina Wada</div></a>
+                <a href=""><div class="member"><div class="job drg small"></div>Kali Weiss</div></a>
+                <a href=""><div class="member"><div class="job brd small"></div>Cassandra D'la'sol</div></a>
+                <a href=""><div class="member"><div class="job brd small"></div>Riruru Riru</div></a>
+                <a href=""><div class="member"><div class="job smn small"></div>Maki Suguis</div></a>
+            </div>
+        </div>
+
+        <div class="text-container">
+            <p>Com divulgações orgânicas entre amigos e em Lives via Twitch, a Jiyuna Ika cresceu o suficiente pra ser considerada uma FC grande, conseguindo <a href="https://www.reddit.com/r/ffxiv/comments/laenmq/on_0129_we_celebrate_the_brazillian_transgender/">promover eventos</a> que conseguem juntar várias pessoas em prol de um único objetivo: criar vínculos, se distrair e ajudar uns aos outros a cumprir objetivos pessoais dentro do jogo.</p>
+        </div>
+
+        <h3>staff</h3>
+        <div class="staff-container">
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/19210263/">
+                <div class="staff">
+                    <div class="role">
+                        <img src="img/system/staff/roles/president.png" alt="">
+                        President
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/a23316227544639e9625a73b5ccc453c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656289920" alt=""></div>
+                    <div class="name">
+                        <p>kurohane</p>
+                        <p>enki</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/29518378/">
+                <div class="staff">
+                    <div class="role">
+                        <img src="img/system/staff/roles/vice-president.png" alt="">
+                        Vice-President
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/be2bf245a304ed40ad0ca79c6ad8d7bb_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656290364" alt=""></div>
+                    <div class="name">
+                        <p>ygg</p>
+                        <p>lart</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/25899347/">
+                <div class="staff">
+                    <div class="role">
+                        <img src="img/system/staff/roles/vice-president.png" alt="">
+                        Vice-President
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/239027da291968bae2ee941c82eecfd9_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656291795" alt=""></div>
+                    <div class="name">
+                        <p>ryodan</p>
+                        <p>onoko</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/11515265/">
+                <div class="staff">
+                    <div class="role">
+                        <img src="img/system/staff/roles/vice-president.png" alt="">
+                        Vice-President
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/27b20af0d2817df1e966e1a3c9e04235_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656292060" alt=""></div>
+                    <div class="name">
+                        <p>nyar</p>
+                        <p>dodix</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/29722755/">
+                <div class="staff">
+                    <div class="role">
+                        <img src="img/system/staff/roles/headcouncil.png" alt="">
+                        Headcouncil
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936" alt=""></div>
+                    <div class="name">
+                        <p>cassandra</p>
+                        <p>d'la'sol</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/8018580/">
+                <div class="staff">
+                    <div class="role">
+                        <img src="img/system/staff/roles/council.png" alt="">
+                        Council
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/90ed90148525f20bdb08b178e89b6e11_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656291068" alt=""></div>
+                    <div class="name">
+                        <p>eir</p>
+                        <p>mahariel</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/27860143/">
+                <div class="staff">
+                    <div class="role">
+                        <img src="img/system/staff/roles/council.png" alt="">
+                        Council
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/38acd1acdca441d1a3be2ffb6cf35310_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656289002" alt=""></div>
+                    <div class="name">
+                        <p>lilina</p>
+                        <p>wada</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/28352880/">
+                <div class="staff">
+                    <div class="role">
+                        <img src="img/system/staff/roles/council.png" alt="">
+                        Council
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/ae57e3ec5a4bfa3d177667dd776e309f_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656291086" alt=""></div>
+                    <div class="name">
+                        <p>riruru</p>
+                        <p>riru</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        
+        <h3><img style="width: 2.1rem;" src="img/system/favicon/0_raw.svg" alt=""> companheiros</h3>
+        <div class="staff-container">
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/19210263/">
+                <div class="staff">
+                    <div class="role">
+                        Companheiro
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/5b06100849b4b3b93dd7b757927c86c3_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288840" alt=""></div>
+                    <div class="name">
+                        <p>scarlet</p>
+                        <p>delaire</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/29518378/">
+                <div class="staff">
+                    <div class="role">
+                        Companheiro
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/894718c1943cc0fd25ab7f6407450866_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656289351" alt=""></div>
+                    <div class="name">
+                        <p>O'riohn</p>
+                        <p>Tia</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/25899347/">
+                <div class="staff">
+                    <div class="role">
+                        Companheiro
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/ff4435429071a1709f3b9815e19f48ff_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656291985" alt=""></div>
+                    <div class="name">
+                        <p>ramza</p>
+                        <p>mal</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/11515265/">
+                <div class="staff">
+                    <div class="role">
+                        Companheiro
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/b581ecff4916768856980bfccb377be8_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656290102" alt=""></div>
+                    <div class="name">
+                        <p>y'esod</p>
+                        <p>keter</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/29722755/">
+                <div class="staff">
+                    <div class="role">
+                        Companheiro
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/c27c43f48602dc1c516ddd5b2bea6e5d_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656290343" alt=""></div>
+                    <div class="name">
+                        <p>faeru</p>
+                        <p>aridan</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/8018580/">
+                <div class="staff">
+                    <div class="role">
+                        Companheiro
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/cdd3be3f3d350fcfbfb458fc022c16d2_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656289267" alt=""></div>
+                    <div class="name">
+                        <p>lyphas</p>
+                        <p>borwan</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://na.finalfantasyxiv.com/lodestone/character/27860143/">
+                <div class="staff">
+                    <div class="role">
+                        Companheiro
+                    </div>
+                    <div class="profile-pic"><img src="https://img2.finalfantasyxiv.com/f/c8ef24f605e1fcd508076ba4d668ac84_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656292179" alt=""></div>
+                    <div class="name">
+                        <p>inqui</p>
+                        <p>healhands</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        
+        <h3>ikasona</h3>
+
+        <div class="post-img"><img src="img/system/ikasona.png" alt="">
+            <div class="description-ikasona">
+                <span class="clr-secondary">Ikasona</span> - Empyreum, Ward 16, Plot 12
+            </div>
+        </div>
+
+        <div class="text-container">
+            <p>Atualmente, a Jiyuna Ika se encontra em com uma casa grande em Empyreum (Ward 16, Plot 12) e em um <a href="https://discord.gg/Chkuky8Ugp">Discord</a>, principal canal de comunicação da FC além do próprio Chat Ingame.</p>
+        </div>
+
+
+
+    </div>
+
+    <div class="footer">
+        <p>© Jiyuna Ika. FFXIV Free Company @ Behemoth</p>
+
+        <div class="buttons">
+            <a href="https://discord.gg/Chkuky8Ugp"><div class="button discord">
+                <img src="img/system/discord-icon.svg" alt="">
+                Discord
+            </div></a>
+            <a href="https://na.finalfantasyxiv.com/lodestone/freecompany/9234349560946608924/"><div class="button lodestone">
+                <img src="img/system/ffxiv-icon.svg" alt="">
+                Lodestone
+            </div></a>
+        </div>
+    </section>
+    <!-- about : end -->
+        
+
+    <!-- fotos : start -->
+    <section id="fotos" class="section page">
+
+        <h2><span>fotos</span> da jiyuna ika</h2>
+
+        <div class="featured-container">
+
+            <div class="featured">
+                <div class="feat-tag">
+                    <p>último evento</p>
+                    <h5>make it rika 2022</h5>
+                </div>
+            </div>
+
+            <div class="feat-side">
+                <div class="feat-first">
+                    <p>eventos</p>
+                </div>
+
+                <div class="feat-second">
+                    <p>roleplay</p>
+                </div>
+
+                <div class="feat-third">
+                    <p>trial</p>
+                </div>
+
+                <div class="feat-fourth">
+                    <p>raids</p>
+                </div>
+            </div>
+
+        </div>  
+
+    </section>
+    <!-- fotos : end -->
+
+    <!-- biscoito : start -->
+    <section id="biscoito" class="section page">
+
+        <h2><span>biscoito</span> ika</h2>
+
+        <div class="biscoito-container">
+
+            <div class="biscoito-cover arr">
+                <h5>a realm reborn</h5>
+                <a href="#biscoito-ika-arr-trials" class="button">trials</a>
+                <a href="#biscoito-ika-arr-raids" class="button">raids</a>
+            </div>
+
+            <div class="biscoito-cover hw">
+                <h5>heavensward</h5>
+                <a href="#biscoito-ika-hw-trials" class="button">trials</a>
+                <a href="#biscoito-ika-hw-raids" class="button">raids</a>
+            </div>
+
+            <div class="biscoito-cover sb">
+                <h5>stormblood</h5>
+                <a href="#biscoito-ika-sb-trials" class="button">trials</a>
+                <a href="#biscoito-ika-sb-raids" class="button">raids</a>
+            </div>
+
+            <div class="biscoito-cover shb">
+                <h5>shadowbringers</h5>
+                <a href="#biscoito-ika-shb-trials" class="button">trials</a>
+                <a href="#biscoito-ika-shb-raids" class="button">raids</a>
+            </div>
+
+            <div class="biscoito-cover ew">
+                <h5>endwalker</h5>
+                <a href="#biscoito-ika-ew-trials" class="button">trials</a>
+                <a href="#biscoito-ika-ew-raids" class="button">raids</a>
+            </div>
+        </div>
+    </section>
+    <section id="biscoito-ika-arr-trials" class="section page"><h2><span>biscoito</span> ika</h2><h4>a realm reborn (trials)</h4><div id="biscoitoContainer"></div></section>
+    
+    <!-- biscoito : end -->
+
+    <!-- censo : start -->
+    <section id="censo" class="section page">
+
+        <h2><span>censo</span> ika</h2>
+
+
+    </section>
+    <!-- censo : end -->
+
+
+
     
 <script src="script/main.js"></script>
 </body>

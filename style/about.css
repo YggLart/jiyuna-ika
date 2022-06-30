@@ -17,17 +17,6 @@
     outline: solid 1px rgb( var(--clr-light), .1);
 }
 
-.about h3 {
-    position: relative;
-    margin: 0;
-    padding: 5rem 0 1rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3rem;
-
-    color:rgb( var(--clr-primary) );
-}
-
 .staff-container a {
     color: rgb( var(--clr-white) );
     font-weight: 300;
@@ -172,16 +161,18 @@
 
 .post-img img {
     border-radius: 1rem;
-    outline: solid 1px rgb( var(--clr-secondary), 0 );
     width: 100%;
+    overflow: hidden;
 
     transition: .4s;
 }
 
 .post-img {
     position: relative;
-    margin: 0 auto;
     max-width: 1280px;
+    overflow: hidden;
+    border-radius: 1rem;
+    outline: solid 1px rgb( var(--clr-secondary), 0 );
 
     transition: .4s;
 }
@@ -202,10 +193,10 @@
 .post-img:hover {
     transform: translateY(-15px);
     box-shadow: 0 10px 10px rgb( var(--clr-black), .6 );
+    outline: solid 1px rgb( var(--clr-secondary), 1 );
 }
 
 .post-img:hover img {
-    outline: solid 1px rgb( var(--clr-secondary), 1 );
 }
 
 .post-img:hover .description {
@@ -251,7 +242,7 @@
     
         text-align: start;
     
-        border-bottom: solid 1px rgb( var(--clr-light), .1) );
+        border-bottom: solid 1px rgb( var(--clr-light), .1);
     
         transition: .5s;
     }

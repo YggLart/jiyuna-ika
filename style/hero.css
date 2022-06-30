@@ -23,7 +23,7 @@
     z-index: -9;
 
     background: rgb(14,14,16);
-    background: linear-gradient(180deg, rgba(14,14,16,0) 0%, rgba(14,14,16,0.4990371148459384) 50%, rgba(14,14,16,1) 100%);
+    background: linear-gradient(180deg, rgb( var(--clr-dark), 0 ) 0%, rgb( var(--clr-dark), .5 ) 50%, rgb( var(--clr-dark), 1 ) 100%);
 }
 
 .hero-description {
@@ -61,8 +61,10 @@
 .title {
     display: flex;
     position: absolute;
-    bottom: 0;
-    padding: 2rem;
+    bottom: 0; left: 0; right: 0;
+    margin: 0 auto;
+    padding: 4rem;
+    max-width: 1980px;
 
     text-transform: uppercase;
     color: rgb( var(--clr-white) );
@@ -98,7 +100,7 @@
     transition: .5s;
 
     letter-spacing: 2px;
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(1rem, 4vw, 6rem);
 
     --clr-discord: rgba(88, 105, 234, 1);
     color: var(--clr-discord);
@@ -112,7 +114,7 @@
     top: 0; bottom: 0; right: 0; left: 0;
     width: 1rem; height: 1rem;
     margin: auto;
-    transition: opacity .3s, .5s;
+    transition: 1s;
     border-radius: 50%;
     z-index: -1;
     opacity: 0;
@@ -121,7 +123,7 @@
 }
 
 .discord .button:hover::before {
-    transform: scale(28);
+    transform: scale(50);
     opacity: 1;
 }
 
