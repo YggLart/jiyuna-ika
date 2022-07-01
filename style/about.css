@@ -17,6 +17,18 @@
     outline: solid 1px rgb( var(--clr-light), .1);
 }
 
+.text-container a {
+    color: rgb( var(--clr-primary) );
+    transition: .3s;
+
+    font-weight: 600;
+}
+
+.text-container a:hover {
+    color: rgb( var(--clr-secondary) );
+    transform: translateY(-3px);
+}
+
 .staff-container a {
     color: rgb( var(--clr-white) );
     font-weight: 300;
@@ -159,23 +171,21 @@
 /* POST =========================== */
 /* ================================ */
 
-.post-img img {
-    border-radius: 1rem;
-    width: 100%;
-    overflow: hidden;
-
-    transition: .4s;
-}
 
 .post-img {
     position: relative;
     max-width: 1280px;
+    height: 50vh;
     overflow: hidden;
     border-radius: 1rem;
     outline: solid 1px rgb( var(--clr-secondary), 0 );
-
+    background-position: center;
+    background-size: cover;
     transition: .4s;
 }
+
+.post-img.ikasona { background-image: url('../img/system/ikasona.png'); }
+.post-img.intro { background-image: url('../img/screenshots/fotos/2020/casamento/01.jpg'); }
 
 .post-img .description {
     position: absolute;
@@ -191,9 +201,8 @@
 }
 
 .post-img:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 10px 10px rgb( var(--clr-black), .6 );
-    outline: solid 1px rgb( var(--clr-secondary), 1 );
+    box-shadow: 0 0 1rem rgb( var(--clr-white), .3 );
+    outline: solid 1px rgb( var(--clr-white), .5 );
 }
 
 .post-img:hover .description {

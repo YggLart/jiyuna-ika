@@ -276,3 +276,12 @@
 .biscoito-cover .button:last-child {
     margin-bottom: 2rem;
 }
+
+.biscoito-cover .button.off {
+    letter-spacing: 2px;
+    transform: translateY(0);
+    color: rgb(var(--clr-white), .5);
+    outline: solid 1px rgb(var(--clr-white), .5);
+    background-color: rgb( var(--clr-black), .3 );
+    backdrop-filter: blur(0);
+}

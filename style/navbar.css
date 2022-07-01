@@ -24,6 +24,39 @@ nav {
     max-width: 1280px;
 }
 
+.main-logo {
+    position: relative;
+    overflow: hidden;
+
+    width: 4rem; height: 4rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+
+    background-image: url('../img/system/jiyuna-ika-logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.main-logo::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 1%; height: 1%;
+    border-radius: 1rem;
+    z-index: -1;
+
+    transform: translate(-50%, -50%);
+    background-color: rgb( var(--clr-black), .8 );
+
+    transition: .5s;
+}
+
+.main-logo:hover::after {
+    transform: scale(3);
+    padding: 2rem;
+}
+
 .menu-icon {
     display: none;
     visibility: hidden;
@@ -48,6 +81,7 @@ nav {
 
 .nav-links a:hover {
     color: rgb( var(--clr-secondary) );
+    transform: translateY(-3px);
 
 }
 
