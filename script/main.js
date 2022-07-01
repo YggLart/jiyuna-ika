@@ -1,157 +1,93 @@
 display = {
-  // updateGallery: function() {
-  //   var galleryDiv = document.getElementById("galleryContainer");
-    
-  //   galleryDiv.innerHTML = "";
-
-  //   for(i=0; i < gallery.name.length; i++) {
-  //     galleryDiv.innerHTML += '<div class="gallery"><div class="cover-blur"><a href="">' + gallery.name[i] + '</a></div><div class="cover ' + gallery.name[i] + '"></div></div>'
-  //   }
-  // },
   updateBiscoito: function() {
     var biscoitoDiv = document.getElementById("biscoitoContainer");
-
     biscoitoDiv.innerHTML = "";
 
-    for(i=0; i < biscoito.dutyName.length; i++) {
-      biscoitoDiv.innerHTML += ''
-      biscoitoDiv.innerHTML += '<div class="group-img"> <img src="'+ biscoito.screenshot[i] +'" alt=""> <div class="duty-info position-1"> <p class="name">'+ biscoito.dutyName[i] +'</p><p class="duty-level '+ biscoito.dutyLevel[i] +'">'+ biscoito.dutyLevel[i] +'</p></div><div class="date position-1">'+ biscoito.date[i] +'</div><div class="party-info position-1"> <a href="'+ biscoito.player1.lodestone[i] +'"><div class="member"><div class="job '+ biscoito.player1.job[i] +' small"></div>'+ biscoito.player1.nick[i] +'</div></a> <a href="'+ biscoito.player2.lodestone[i] +'"><div class="member"><div class="job '+ biscoito.player2.job[i] +' small"></div>'+ biscoito.player2.nick[i] +'</div></a> <a href="'+ biscoito.player3.lodestone[i] +'"><div class="member"><div class="job '+ biscoito.player3.job[i] +' small"></div>'+ biscoito.player3.nick[i] +'</div></a> <a href="'+ biscoito.player4.lodestone[i] +'"><div class="member"><div class="job '+ biscoito.player4.job[i] +' small"></div>'+ biscoito.player4.nick[i] +'</div></a> <a href="'+ biscoito.player5.lodestone[i] +'"><div class="member"><div class="job '+ biscoito.player5.job[i] +' small"></div>'+ biscoito.player5.nick[i] +'</div></a> <a href="'+ biscoito.player6.lodestone[i] +'"><div class="member"><div class="job '+ biscoito.player6.job[i] +' small"></div>'+ biscoito.player6.nick[i] +'</div></a> <a href="'+ biscoito.player7.lodestone[i] +'"><div class="member"><div class="job '+ biscoito.player7.job[i] +' small"></div>'+ biscoito.player7.nick[i] +'</div></a> <a href="'+ biscoito.player8.lodestone[i] +'"><div class="member"><div class="job '+ biscoito.player8.job[i] +' small"></div>'+ biscoito.player8.nick[i] +'</div></a> </div></div>'
-    }
+    biscoitoBoxes(biscoitoDiv);
   }
 }
 
-var gallery = {
-  name: [ 
-    "eventos",
-    "trials",
-    "raids",
-    "roleplay",
-    "housing",
-    "glamour",
-  ],
-
-  cover: [
-    "../img/screenshots/fotos/cover/cover 02.jpg",
-    "../img/screenshots/fotos/cover/cover 01.jpg",
-    "../img/screenshots/fotos/cover/cover 03.jpg",
-    "../img/screenshots/fotos/cover/cover 04.jpg",
-    "../img/screenshots/fotos/cover/cover 05.jpg",
-    "../img/screenshots/fotos/cover/cover 06.jpg",
-  ],
-
-  icon: [],
+var fotos = {
+  url: [],
+  date: [],
+  sendBy: [],
+  lodestone: [],
+  description: [],
 }
 
 var biscoito = {
 
-  dutyName: [
-    "Second Coil of Bahamut - Turn 9"
-  ],
-  dutyLevel: [
-    "normal"
-  ],
-  screenshot: [
-    "img/screenshots/fotos/2020/raid/bahamut01.png",
-  ],
-  date: [
-    "16/06/2020"
-  ],
+  dutyName: [],
+  dutyLevel: [],
+  screenshot: [],
+  date: [],
 
   player1: {
-    nick: [
-      "Ryodan Onoko",
-    ],
-    job: [ 
-      "war",
-    ],
-    lodestone: [ 
-      "",
-    ],
+    nick: [],
+    job: [],
+    lodestone: [],
   },
 
   player2: {
-    nick: [
-      "Kuro Brson",
-    ],
-    job: [ 
-      "pld",
-    ],
-    lodestone: [ 
-      "",
-    ],
+    nick: [],
+    job: [],
+    lodestone: [],
   },
 
   player3: {
-    nick: [
-      "Nyar Dodix",
-    ],
-    job: [ 
-      "whm",
-    ],
-    lodestone: [ 
-      "",
-    ],
+    nick: [],
+    job: [],
+    lodestone: [],
   },
 
   player4: {
-    nick: [
-      "Lilina Wada",
-    ],
-    job: [ 
-      "ast",
-    ],
-    lodestone: [ 
-      "",
-    ],
+    nick: [],
+    job: [],
+    lodestone: [],
   },
 
   player5: {
-    nick: [
-      "Kali Weiss",
-    ],
-    job: [ 
-      "drg",
-    ],
-    lodestone: [ 
-      "",
-    ],
+    nick: [],
+    job: [],
+    lodestone: [],
   },
 
   player6: {
-    nick: [
-      "Cassandra D'la'Sol",
-    ],
-    job: [ 
-      "brd",
-    ],
-    lodestone: [ 
-      "",
-    ],
+    nick: [],
+    job: [],
+    lodestone: [],
   },
 
   player7: {
-    nick: [
-      "Riruru Riru",
-    ],
-    job: [ 
-      "brd",
-    ],
-    lodestone: [ 
-      "",
-    ],
+    nick: [],
+    job: [],
+    lodestone: [],
   },
 
   player8: {
-    nick: [
-      "Maki Suguis",
-    ],
-    job: [ 
-      "smn",
-    ],
-    lodestone: [ 
-      "",
-    ],
+    nick: [],
+    job: [],
+    lodestone: [],
   },
+}
+
+
+// ------------------------------------------------
+// get elements from inputs at generate_new.html
+// ------------------------------------------------
+const fs = require("fs");
+
+function newFotoFromInput() {
+
+  let inputURL = document.getElementById("inputURL").value;
+  // let inputDate = document.getElementById("inputDate").value;
+  // let inputDescription = document.getElementById("inputDescription").value;
+  // let inputSendBy = document.getElementById("inputSendBy").value;
+  // let inputLodestone = document.getElementById("inputLodestone").value;
+  alert(inputURL);
+  // newFoto(inputURL, inputDate, inputDescription, inputSendBy, inputLodestone)
+
+  fs.writeFileSync("output.txt", inputURL);
 }
 
 // ------------------------------------------------
@@ -161,7 +97,6 @@ window.onload = function () {
 
   newBiscoito_8Player("Alexander", "savage", "16/16/9000", "img/screenshots/fotos/cover/cover 02.jpg", "oroboros", "war", "", "aaa", "pld", "", "bbb", "drk", "", "ccc", "whm", "", "ddd", "ast", "", "eee", "drg", "", "fff", "brd", "", "qwe", "mnk", "")
 
-  // display.updateGallery();
   display.updateBiscoito();
 }
 
@@ -185,7 +120,28 @@ function checkHash() {
 }
 
 // ------------------------------------------------
-// new biscoito
+// new fotos var
+// ------------------------------------------------
+function newFoto(url, date, sendBy, lodestone, description) {
+  fotos.url.push(url);
+  fotos.date.push(date);
+  fotos.sendBy.push(sendBy);
+  fotos.lodestone.push(lodestone);
+  fotos.description.push(description);
+}
+
+// ------------------------------------------------
+// new biscoito boxes
+// ------------------------------------------------
+function biscoitoBoxes(biscoitoDiv) {
+  for (i = 0; i < biscoito.dutyName.length; i++) {
+    biscoitoDiv.innerHTML += '';
+    biscoitoDiv.innerHTML += '<div class="group-img"> <img src="' + biscoito.screenshot[i] + '" alt=""> <div class="duty-info position-1"> <p class="name">' + biscoito.dutyName[i] + '</p><p class="duty-level ' + biscoito.dutyLevel[i] + '">' + biscoito.dutyLevel[i] + '</p></div><div class="date position-1">' + biscoito.date[i] + '</div><div class="party-info position-1"> <a href="' + biscoito.player1.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player1.job[i] + ' small"></div>' + biscoito.player1.nick[i] + '</div></a> <a href="' + biscoito.player2.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player2.job[i] + ' small"></div>' + biscoito.player2.nick[i] + '</div></a> <a href="' + biscoito.player3.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player3.job[i] + ' small"></div>' + biscoito.player3.nick[i] + '</div></a> <a href="' + biscoito.player4.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player4.job[i] + ' small"></div>' + biscoito.player4.nick[i] + '</div></a> <a href="' + biscoito.player5.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player5.job[i] + ' small"></div>' + biscoito.player5.nick[i] + '</div></a> <a href="' + biscoito.player6.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player6.job[i] + ' small"></div>' + biscoito.player6.nick[i] + '</div></a> <a href="' + biscoito.player7.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player7.job[i] + ' small"></div>' + biscoito.player7.nick[i] + '</div></a> <a href="' + biscoito.player8.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player8.job[i] + ' small"></div>' + biscoito.player8.nick[i] + '</div></a> </div></div>';
+  }
+}
+
+// ------------------------------------------------
+// new biscoito var
 // ------------------------------------------------
 function newBiscoito_8Player(dutyName, dutyLevel, date, screenshot, p1nick, p1job, p1lodestone, p2nick, p2job, p2lodestone, p3nick, p3job, p3lodestone, p4nick, p4job, p4lodestone, p5nick, p5job, p5lodestone, p6nick, p6job, p6lodestone, p7nick, p7job, p7lodestone, p8nick, p8job, p8lodestone) {
   biscoito.dutyName.push(dutyName);
@@ -225,7 +181,6 @@ function newBiscoito_8Player(dutyName, dutyLevel, date, screenshot, p1nick, p1jo
   biscoito.player8.job.push(p8job);
   biscoito.player8.lodestone.push(p8lodestone);
 }
-
 
 // ------------------------------------------------
 // responsive menu
