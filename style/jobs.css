@@ -247,6 +247,7 @@
 
 .biscoito-cover:hover h5 {
     font-size: 2rem;
+    letter-spacing: .4rem;
 }
 
 .biscoito-cover .button {

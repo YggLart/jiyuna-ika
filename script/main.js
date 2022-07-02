@@ -75,20 +75,39 @@ var biscoito = {
 // ------------------------------------------------
 // get elements from inputs at generate_new.html
 // ------------------------------------------------
-const fs = require("fs");
+
+var form = document.getElementById('newFotoForm');
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
 
 function newFotoFromInput() {
+  var outputFotos = document.getElementById("outputFotos");
 
   let inputURL = document.getElementById("inputURL").value;
-  // let inputDate = document.getElementById("inputDate").value;
-  // let inputDescription = document.getElementById("inputDescription").value;
-  // let inputSendBy = document.getElementById("inputSendBy").value;
-  // let inputLodestone = document.getElementById("inputLodestone").value;
-  alert(inputURL);
-  // newFoto(inputURL, inputDate, inputDescription, inputSendBy, inputLodestone)
-
-  fs.writeFileSync("output.txt", inputURL);
+  let inputDate = document.getElementById("inputDate").value;
+  let inputDescription = document.getElementById("inputDescription").value;
+  let inputSendBy = document.getElementById("inputSendBy").value;
+  let inputLodestone = document.getElementById("inputLodestone").value;
+  let inputTag = document.getElementById("inputTag").value;
+  
+  outputFotos.innerHTML += 'newFoto("' + inputURL +'", "' + inputDate + '", "' + inputDescription + '", "' + inputSendBy + '", "' + inputLodestone + '", "' + inputTag + '"); <br/>';
 }
+
+var textFile = null,
+  makeTextFile = function (text) {
+    var data = new Blob([text], {type: 'text/plain'});
+
+    // If we are replacing a previously generated file we need to
+    // manually revoke the object URL to avoid memory leaks.
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
+    }
+
+    textFile = window.URL.createObjectURL(data);
+
+    // returns a URL you can use as a href
+    return textFile;
+  };
 
 // ------------------------------------------------
 // onload

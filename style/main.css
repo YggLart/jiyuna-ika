@@ -152,6 +152,23 @@ h4 {
 /* ----------------------------------------- */
 /* custom layout --------------------------- */
 /* ----------------------------------------- */
+form {
+    padding: 2rem;
+}
+.input {
+    width: 500px;
+    margin: .3rem 0;
+}
+
+.input-button {
+    padding: 2rem;
+}
+
+#outputFotos {
+    padding: 0 2rem;
+    line-height: 1.5rem;
+}
+
 .section { display: none; }
 .section:target { display: block !important; }
 
@@ -172,3 +189,4 @@ h4 {
         text-align: center;
     }
 }
+

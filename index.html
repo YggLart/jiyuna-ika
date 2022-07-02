@@ -40,7 +40,10 @@
 
     <!-- ionicon -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>       
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <!-- jquery -->
+    <script src="script/jquery.js"></script>     
 
     <!-- page title -->
     <title>Jiyuna Ika - Free Company from Behemoth @ Primal</title>
@@ -514,18 +517,21 @@
         </div>
     </div>
 
-    <h3>Nova Foto</h3>
-    <p>Preencha as informações da foto.</p>
-    <form onsubmit="newFotoFromInput()">
+    <form id="newFotoForm" onsubmit="newFotoFromInput()">
+        <h3>Nova Foto</h3>
+        <p>Preencha as informações da foto.</p>
     
-        URL: <input type="text" id="inputURL"> <br>
-        Data: <input type="text" name="" id="inputDate"> <br>
-        Descrição: <input type="text" id="inputDescription"> <br>
-        Enviado por: <input type="text" name="" id="inputSendBy"> <br>
-        Link da Lodestone: <input type="text" name="" id="inputLodestone">
-        <input type="submit" value="Enviar">
+        URL: <input class="input" type="text" id="inputURL"> <br>
+        Data: <input class="input" type="text" name="" id="inputDate"> <br>
+        Descrição: <input class="input" type="text" id="inputDescription"> <br>
+        Enviado por: <input class="input" type="text" name="" id="inputSendBy"> <br>
+        Link da Lodestone: <input class="input" type="text" name="" id="inputLodestone"> <br>
+        Galeria: <input class="input" type="text" name="" id="inputTag">  <br>
+        <input class="input-button" type="submit" value="Enviar">
 
     </form>
+
+    <div id="outputFotos"></div>
     
 <script src="script/main.js"></script>
 </body>
