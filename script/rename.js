@@ -3,7 +3,7 @@ const { resolve } = require('path');
 
 
 // Get path to image directory
-const imageDirPath = resolve(__dirname, 'img/screenshots/fotos/2020/0-rename');
+const imageDirPath = resolve(__dirname, 'img/screenshots/fotos/2020/eventos');
 
 // Get an array of the files inside the folder
 const files = readdirSync(imageDirPath);
@@ -24,4 +24,5 @@ files.forEach(file => {
     newPath,
     err => console.log(err)
   );
+
 });
