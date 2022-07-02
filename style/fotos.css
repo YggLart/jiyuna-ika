@@ -100,7 +100,7 @@
     cursor: pointer;
 
     outline: solid 1px rgb( var(--clr-black), .5 );
-    background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png');
+    background-image: url('../img/screenshots/fotos/2022/eventos/makeitrika-tacca.png');
     background-position: center;
     background-size: cover;
     box-shadow: 0 0 0 rgb( var(--clr-black), .5 );
@@ -232,7 +232,7 @@
     backdrop-filter: blur(1px);
 }
 
-.feat-1 { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
+.feat-1 { position: relative; background-image: url('../img\screenshots\fotos\2020\achievements\torrekugane-kenji.png'); }
 .feat-2 { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
 .feat-3 { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
 .feat-4 { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
@@ -266,6 +266,13 @@
     outline: var(--outline);
 }
 
+.foto:hover,
+.foto:active  {
+    outline: solid 1px rgb( var(--clr-secondary) );
+    transform: translateY(-10px);
+    box-shadow: 0 8px 10px rgb( var(--clr-black), .4 );
+}
+
 .foto img {
     width: 100%;
     object-fit: cover;
@@ -281,6 +288,7 @@
     position: absolute;
     padding: .5rem 1rem;
     border-radius: 1rem;
+    user-select: none;
 
     background-color: rgb( var(--clr-black), .5 );
 
@@ -375,3 +383,4 @@
 
     background-color: rgb( var(--clr-black), .85 );
 }
+

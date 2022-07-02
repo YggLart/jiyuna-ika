@@ -112,12 +112,12 @@ function newFotoFromInput() {
 // ------------------------------------------------
 window.onload = function () {
 
-  newFoto("img/screenshots/fotos/2020/achievements/boreas-matt.jpg", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newFoto("img/screenshots/fotos/2020/achievements/firebird-bari.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/duty/mapas-matt.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/eventos/aniversariomega-vic.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
   newFoto("img/screenshots/fotos/2020/achievements/firebird-kenji.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newFoto("img/screenshots/fotos/2020/achievements/torrekugane-dino.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/duty/eureka-kenji.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
   newFoto("img/screenshots/fotos/2020/achievements/boreas-matt.jpg", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newFoto("img/screenshots/fotos/2020/achievements/boreas-matt.jpg", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/duty/mapas-matt4.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
   newBiscoito_8Player("Alexander", "savage", "16/16/9000", "img/screenshots/fotos/cover/cover 02.jpg", "oroboros", "war", "", "aaa", "pld", "", "bbb", "drk", "", "ccc", "whm", "", "ddd", "ast", "", "eee", "drg", "", "fff", "brd", "", "qwe", "mnk", "")
 
   display.updateFotosAchievements();
