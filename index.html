@@ -111,7 +111,7 @@
         </div>
 
         <div class="group-img">
-            <img src="img/screenshots/fotos/2020/raid/bahamut01.png" alt="">
+            <img src="img/screenshots/biscoito/2020/t9-kenji.png" alt="">
             <div class="duty-info position-1">
                 <p class="name">Second Coil of Bahamut - Turn 9</p>
                 <p class="duty-level">Normal</p>
@@ -385,7 +385,7 @@
 
             <div class="feat-side">
                 <p>álbums</p>
-                <a href="#fotos-eventos" class="feat-1"><p>eventos</p></a>
+                <a href="#fotos-achievements" class="feat-1"><p>achievements</p></a>
                 <a href="#fotos-roleplay" class="feat-2"><p>roleplay</p></a>
                 <a href="#fotos-trials" class="feat-3"><p>trials</p></a>
                 <a href="#fotos-raids" class="feat-4"><p>raids</p></a>
@@ -397,17 +397,42 @@
     <!-- fotos menu : end -->
 
     
-    <!-- fotos eventos : start -->
-    <section id="fotos-eventos" class="section page">
-
-        <h2><span>fotos</span> eventos</h2>
-
-        <div id="fotosEventsContainer" class="fotos events-container">
-
+    <!-- fotos achievements : start -->
+    <section id="fotos-achievements" class="section">
+        <div class="page">
+            <h2><span>fotos</span> achievements</h2>
         </div>
 
+        <div id="fotosAchievement_Container" class="achievements-container"></div>
+
+
+        <div class="pop-up-img">
+            <i class="close-pop-up fa-solid fa-xmark" onclick="closePopUpImage()"></i>
+            <img src="img/screenshots/fotos/2020/achievements/torrekugane-kenji.png" alt="">
+
+            <div class="info-img">
+                <div class="send-by" id="fotos' + fotos.gallery[i] + '_SendBy">
+                    Enviado por:
+                    <a id="fotos' + fotos.gallery[i] + '_lodestone"
+                        href="https://na.finalfantasyxiv.com/lodestone/character/' + fotos.lodestone[i] + '">
+                        ' + fotos.sendBy[i] + '
+                    </a>
+                </div>
+
+                <div class="description" id="fotos' + fotos.gallery[i] + '_Description">
+                    ' + fotos.description[i] + '
+                </div>
+
+                <div class="date" id="fotos' + fotos.gallery[i] + '_Date">
+                    ' + fotos.date[i] + '
+                </div>
+            </div>
+            <div class="pop-up-background" onclick="closePopUpImage()"></div>
+        </div>
+
+
     </section>
-    <!-- fotos eventos : end -->
+    <!-- fotos achievements : end -->
     
 
     <!-- fotos roleplay : start -->
@@ -415,9 +440,9 @@
 
         <h2><span>fotos</span> roleplay</h2>
 
-        <div id="fotosRoleplayContainer" class="fotos events-container">
+        <div id="fotosRoleplayContainer" class="fotos events-container"></div>
 
-        </div>
+        
 
     </section>
     <!-- fotos roleplay : end -->
@@ -526,7 +551,7 @@
         Descrição: <input class="input" type="text" id="inputDescription"> <br>
         Enviado por: <input class="input" type="text" name="" id="inputSendBy"> <br>
         Link da Lodestone: <input class="input" type="text" name="" id="inputLodestone"> <br>
-        Galeria: <input class="input" type="text" name="" id="inputTag">  <br>
+        Galeria: <input class="input" type="text" name="" id="inputGallery">  <br>
         <input class="input-button" type="submit" value="Enviar">
 
     </form>

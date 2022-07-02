@@ -1,10 +1,23 @@
 display = {
-  updateBiscoito: function() {
+  updateFotosAchievements: function () {
+    var fotosAchievement_Div = document.getElementById("fotosAchievement_Container");
+    fotosAchievement_Div.innerHTML = "";
+
+    for (i = 0; i < fotos.url.length; i++) {
+      fotosAchievement_Div.innerHTML += '<div class="foto"> <img class="image" onClick="reply_click(event,this)"  src="' + fotos.url[i] + '" alt=""> <div class="send-by" id="fotos' + fotos.gallery[i] + '_SendBy"> Enviado por: <a id="fotos' + fotos.gallery[i] + '_lodestone" href="https://na.finalfantasyxiv.com/lodestone/character/' + fotos.lodestone[i] + '"> ' + fotos.sendBy[i] + ' </a> </div><div class="description" id="fotos' + fotos.gallery[i] + '_Description"> ' + fotos.description[i] + ' </div><div class="date" id="fotos' + fotos.gallery[i] + '_Date"> ' + fotos.date[i] + ' </div></div>';
+    }
+  },
+
+  updateBiscoito: function () {
     var biscoitoDiv = document.getElementById("biscoitoContainer");
     biscoitoDiv.innerHTML = "";
 
-    biscoitoBoxes(biscoitoDiv);
-  }
+    for (i = 0; i < biscoito.dutyName.length; i++) {
+      biscoitoDiv.innerHTML += '';
+      biscoitoDiv.innerHTML += '<div class="group-img"> <img src="' + biscoito.screenshot[i] + '" alt=""> <div class="duty-info position-1"> <p class="name">' + biscoito.dutyName[i] + '</p><p class="duty-level ' + biscoito.dutyLevel[i] + '">' + biscoito.dutyLevel[i] + '</p></div><div class="date position-1">' + biscoito.date[i] + '</div><div class="party-info position-1"> <a href="' + biscoito.player1.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player1.job[i] + ' small"></div>' + biscoito.player1.nick[i] + '</div></a> <a href="' + biscoito.player2.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player2.job[i] + ' small"></div>' + biscoito.player2.nick[i] + '</div></a> <a href="' + biscoito.player3.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player3.job[i] + ' small"></div>' + biscoito.player3.nick[i] + '</div></a> <a href="' + biscoito.player4.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player4.job[i] + ' small"></div>' + biscoito.player4.nick[i] + '</div></a> <a href="' + biscoito.player5.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player5.job[i] + ' small"></div>' + biscoito.player5.nick[i] + '</div></a> <a href="' + biscoito.player6.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player6.job[i] + ' small"></div>' + biscoito.player6.nick[i] + '</div></a> <a href="' + biscoito.player7.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player7.job[i] + ' small"></div>' + biscoito.player7.nick[i] + '</div></a> <a href="' + biscoito.player8.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player8.job[i] + ' small"></div>' + biscoito.player8.nick[i] + '</div></a> </div></div>';
+
+    }
+  },
 }
 
 var fotos = {
@@ -13,6 +26,7 @@ var fotos = {
   sendBy: [],
   lodestone: [],
   description: [],
+  gallery: [],
 }
 
 var biscoito = {
@@ -73,7 +87,7 @@ var biscoito = {
 
 
 // ------------------------------------------------
-// get elements from inputs at generate_new.html
+// get elements from inputs
 // ------------------------------------------------
 
 var form = document.getElementById('newFotoForm');
@@ -88,37 +102,50 @@ function newFotoFromInput() {
   let inputDescription = document.getElementById("inputDescription").value;
   let inputSendBy = document.getElementById("inputSendBy").value;
   let inputLodestone = document.getElementById("inputLodestone").value;
-  let inputTag = document.getElementById("inputTag").value;
+  let inputGallery = document.getElementById("inputGallery").value;
   
-  outputFotos.innerHTML += 'newFoto("' + inputURL +'", "' + inputDate + '", "' + inputDescription + '", "' + inputSendBy + '", "' + inputLodestone + '", "' + inputTag + '"); <br/>';
+  outputFotos.innerHTML += 'newFoto("' + inputURL +'", "' + inputDate + '", "' + inputSendBy + '", "' + inputLodestone + '", "' + inputDescription + '", "' + inputGallery + '"); <br/>';
 }
-
-var textFile = null,
-  makeTextFile = function (text) {
-    var data = new Blob([text], {type: 'text/plain'});
-
-    // If we are replacing a previously generated file we need to
-    // manually revoke the object URL to avoid memory leaks.
-    if (textFile !== null) {
-      window.URL.revokeObjectURL(textFile);
-    }
-
-    textFile = window.URL.createObjectURL(data);
-
-    // returns a URL you can use as a href
-    return textFile;
-  };
 
 // ------------------------------------------------
 // onload
 // ------------------------------------------------
 window.onload = function () {
 
+  newFoto("img/screenshots/fotos/2020/achievements/boreas-matt.jpg", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/achievements/firebird-bari.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/achievements/firebird-kenji.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/achievements/torrekugane-dino.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/achievements/boreas-matt.jpg", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  newFoto("img/screenshots/fotos/2020/achievements/boreas-matt.jpg", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
   newBiscoito_8Player("Alexander", "savage", "16/16/9000", "img/screenshots/fotos/cover/cover 02.jpg", "oroboros", "war", "", "aaa", "pld", "", "bbb", "drk", "", "ccc", "whm", "", "ddd", "ast", "", "eee", "drg", "", "fff", "brd", "", "qwe", "mnk", "")
 
+  display.updateFotosAchievements();
   display.updateBiscoito();
 }
 
+// ------------------------------------------------
+// gallery pop-up view
+// ------------------------------------------------
+function reply_click(e,el) {
+  e = e || window.event;
+
+  document.querySelector('.pop-up-img').style.display = 'flex'
+  document.querySelector('.pop-up-img img').src = el.getAttribute('src');
+  
+  console.log(e); //will be the event
+  console.log(el); //we be the dom element 
+}
+
+function closePopUpImage() {
+  document.querySelector('.pop-up-img').style.display = 'none'
+}
+
+
+// document.querySelectorAll('.achievements-container > .foto > img').forEach(image => {
+//   image.onclick = () => {
+//   }
+// });
 
 // ------------------------------------------------
 // page update
@@ -136,27 +163,22 @@ function checkHash() {
   } else {
     hero.style.display = 'none';
   }
-}
+};
+
+// ------------------------------------------------
+// gallery : expand pic
+// ------------------------------------------------
 
 // ------------------------------------------------
 // new fotos var
 // ------------------------------------------------
-function newFoto(url, date, sendBy, lodestone, description) {
+function newFoto(url, date, sendBy, lodestone, description, gallery) {
   fotos.url.push(url);
   fotos.date.push(date);
   fotos.sendBy.push(sendBy);
   fotos.lodestone.push(lodestone);
   fotos.description.push(description);
-}
-
-// ------------------------------------------------
-// new biscoito boxes
-// ------------------------------------------------
-function biscoitoBoxes(biscoitoDiv) {
-  for (i = 0; i < biscoito.dutyName.length; i++) {
-    biscoitoDiv.innerHTML += '';
-    biscoitoDiv.innerHTML += '<div class="group-img"> <img src="' + biscoito.screenshot[i] + '" alt=""> <div class="duty-info position-1"> <p class="name">' + biscoito.dutyName[i] + '</p><p class="duty-level ' + biscoito.dutyLevel[i] + '">' + biscoito.dutyLevel[i] + '</p></div><div class="date position-1">' + biscoito.date[i] + '</div><div class="party-info position-1"> <a href="' + biscoito.player1.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player1.job[i] + ' small"></div>' + biscoito.player1.nick[i] + '</div></a> <a href="' + biscoito.player2.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player2.job[i] + ' small"></div>' + biscoito.player2.nick[i] + '</div></a> <a href="' + biscoito.player3.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player3.job[i] + ' small"></div>' + biscoito.player3.nick[i] + '</div></a> <a href="' + biscoito.player4.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player4.job[i] + ' small"></div>' + biscoito.player4.nick[i] + '</div></a> <a href="' + biscoito.player5.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player5.job[i] + ' small"></div>' + biscoito.player5.nick[i] + '</div></a> <a href="' + biscoito.player6.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player6.job[i] + ' small"></div>' + biscoito.player6.nick[i] + '</div></a> <a href="' + biscoito.player7.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player7.job[i] + ' small"></div>' + biscoito.player7.nick[i] + '</div></a> <a href="' + biscoito.player8.lodestone[i] + '"><div class="member"><div class="job ' + biscoito.player8.job[i] + ' small"></div>' + biscoito.player8.nick[i] + '</div></a> </div></div>';
-  }
+  fotos.gallery.push(gallery);
 }
 
 // ------------------------------------------------
