@@ -89,8 +89,11 @@
     margin-bottom: 5rem;
 }
 
+
+
 .featured {
     min-width: 70%;
+    min-height: 500px;
     height: 100%;
     position: relative;
     display: flex;
@@ -181,6 +184,7 @@
     justify-content: center;
 
     height: 100px;
+    min-width: 80px;
     width: 100%;
     border-radius: 1rem;
     overflow: hidden;
@@ -384,3 +388,20 @@
     background-color: rgb( var(--clr-black), .85 );
 }
 
+
+
+@media (max-width: 800px) {
+    .featured-container {
+        flex-direction: column;
+    }
+    .feat-side {
+        flex-direction: row;
+        margin-top: 1rem;
+        gap: 1rem;
+        width: 100%;
+    }
+    .album-title {
+        display: none;
+    }
+
+}

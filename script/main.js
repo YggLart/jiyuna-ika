@@ -1,9 +1,11 @@
 display = {
+
+  // update gallery
   updateFotos_Eventos: function () {
     var fotosEventos_Div = document.getElementById("fotosEventos_Container");
     fotosEventos_Div.innerHTML = "";
 
-    for (i=0; i < gallery.eventos2020.length; i++) {
+    for (i = 0; i < gallery.eventos2020.length; i++) {
       fotosEventos_Div.innerHTML += '<div onClick="fotoClick(event,this)" class="foto"> <img class="image" src="' + gallery.eventos2020[i].url + '" alt=""> <div class="send-by" id="fotos' + gallery.eventos2020[i].gallery + '_SendBy"> Enviado por: <a id="fotos' + gallery.eventos2020[i].gallery + '_lodestone" href="https://na.finalfantasyxiv.com/lodestone/character/' + gallery.eventos2020[i].sendBy.id + '"> ' + gallery.eventos2020[i].sendBy.name + ' </a> </div><div class="description" id="fotos' + gallery.eventos2020[i].gallery + '_Description"> ' + gallery.eventos2020[i].description + ' </div><div class="date" id="fotos' + gallery.eventos2020[i].gallery + '_Date"> ' + gallery.eventos2020[i].date + ' </div></div>';
     }
   },
@@ -12,7 +14,7 @@ display = {
     var fotosSocial_Div = document.getElementById("fotosSocial_Container");
     fotosSocial_Div.innerHTML = "";
 
-    for (i=0; i < gallery.social2020.length; i++) {
+    for (i = 0; i < gallery.social2020.length; i++) {
       fotosSocial_Div.innerHTML += '<div onClick="fotoClick(event,this)" class="foto"> <img class="image" src="' + gallery.social2020[i].url + '" alt=""> <div class="send-by" id="fotos' + gallery.social2020[i].gallery + '_SendBy"> Enviado por: <a id="fotos' + gallery.social2020[i].gallery + '_lodestone" href="https://na.finalfantasyxiv.com/lodestone/character/' + gallery.social2020[i].sendBy.id + '"> ' + gallery.social2020[i].sendBy.name + ' </a> </div><div class="description" id="fotos' + gallery.social2020[i].gallery + '_Description"> ' + gallery.social2020[i].description + ' </div><div class="date" id="fotos' + gallery.social2020[i].gallery + '_Date"> ' + gallery.social2020[i].date + ' </div></div>';
     }
   },
@@ -21,7 +23,7 @@ display = {
     var fotosAchievement_Div = document.getElementById("fotosAchievement_Container");
     fotosAchievement_Div.innerHTML = "";
 
-    for (i=0; i < gallery.achievements2020.length; i++) {
+    for (i = 0; i < gallery.achievements2020.length; i++) {
       fotosAchievement_Div.innerHTML += '<div onClick="fotoClick(event,this)" class="foto"> <img class="image" src="' + gallery.achievements2020[i].url + '" alt=""> <div class="send-by" id="fotos' + gallery.achievements2020[i].gallery + '_SendBy"> Enviado por: <a id="fotos' + gallery.achievements2020[i].gallery + '_lodestone" href="https://na.finalfantasyxiv.com/lodestone/character/' + gallery.achievements2020[i].sendBy.id + '"> ' + gallery.achievements2020[i].sendBy.name + ' </a> </div><div class="description" id="fotos' + gallery.achievements2020[i].gallery + '_Description"> ' + gallery.achievements2020[i].description + ' </div><div class="date" id="fotos' + gallery.achievements2020[i].gallery + '_Date"> ' + gallery.achievements2020[i].date + ' </div></div>';
     }
   },
@@ -30,21 +32,71 @@ display = {
     var fotosDuty_Div = document.getElementById("fotosDuty_Container");
     fotosDuty_Div.innerHTML = "";
 
-    for (i=0; i < gallery.duty2020.length; i++) {
+    for (i = 0; i < gallery.duty2020.length; i++) {
       fotosDuty_Div.innerHTML += '<div onClick="fotoClick(event,this)" class="foto"> <img class="image" src="' + gallery.duty2020[i].url + '" alt=""> <div class="send-by" id="fotos' + gallery.duty2020[i].gallery + '_SendBy"> Enviado por: <a id="fotos' + gallery.duty2020[i].gallery + '_lodestone" href="https://na.finalfantasyxiv.com/lodestone/character/' + gallery.duty2020[i].sendBy.id + '"> ' + gallery.duty2020[i].sendBy.name + ' </a> </div><div class="description" id="fotos' + gallery.duty2020[i].gallery + '_Description"> ' + gallery.duty2020[i].description + ' </div><div class="date" id="fotos' + gallery.duty2020[i].gallery + '_Date"> ' + gallery.duty2020[i].date + ' </div></div>';
     }
   },
 
-  // updateBiscoito: function () {
-  //   var biscoitoDiv = document.getElementById("biscoitoContainer");
-  //   biscoitoDiv.innerHTML = "";
+  // update biscoito
+  updateBiscoito_2020: function () {
 
-  //   for (i = 0; i < biscoito.dutyName.length; i++) {
-  //     biscoitoDiv.innerHTML += '';
-  //     biscoitoDiv.innerHTML += '<div class="group-img"> <img src="' + biscoito.screenshot[i] + '" alt=""> <div class="duty-info position-1"> <p class="name">' + biscoito.dutyName[i] + '</p><p class="duty-level ' + biscoito.dutyLevel[i] + '">' + biscoito.dutyLevel[i] + '</p></div><div class="date position-1">' + biscoito.date[i] + '</div><div class="party-info position-1"> <a href="' + biscoito.player1.id[i] + '"><div class="member"><div class="job ' + biscoito.player1.job[i] + ' small"></div>' + biscoito.player1.nick[i] + '</div></a> <a href="' + biscoito.player2.id[i] + '"><div class="member"><div class="job ' + biscoito.player2.job[i] + ' small"></div>' + biscoito.player2.nick[i] + '</div></a> <a href="' + biscoito.player3.id[i] + '"><div class="member"><div class="job ' + biscoito.player3.job[i] + ' small"></div>' + biscoito.player3.nick[i] + '</div></a> <a href="' + biscoito.player4.id[i] + '"><div class="member"><div class="job ' + biscoito.player4.job[i] + ' small"></div>' + biscoito.player4.nick[i] + '</div></a> <a href="' + biscoito.player5.id[i] + '"><div class="member"><div class="job ' + biscoito.player5.job[i] + ' small"></div>' + biscoito.player5.nick[i] + '</div></a> <a href="' + biscoito.player6.id[i] + '"><div class="member"><div class="job ' + biscoito.player6.job[i] + ' small"></div>' + biscoito.player6.nick[i] + '</div></a> <a href="' + biscoito.player7.id[i] + '"><div class="member"><div class="job ' + biscoito.player7.job[i] + ' small"></div>' + biscoito.player7.nick[i] + '</div></a> <a href="' + biscoito.player8.id[i] + '"><div class="member"><div class="job ' + biscoito.player8.job[i] + ' small"></div>' + biscoito.player8.nick[i] + '</div></a> </div></div>';
+    let biscoitoDiv_ArrExtreme = document.getElementById("biscoitoContainer_ArrExtreme");
+    let biscoitoDiv_Bahamut = document.getElementById("biscoitoContainer_Bahamut");
 
-  //   }
-  // },
+    let biscoitoDiv_HwSavage = document.getElementById("biscoitoContainer_HwSavage");
+    let biscoitoDiv_HwExtreme = document.getElementById("biscoitoContainer_HwExtreme");
+
+    let biscoitoDiv_SbSavage = document.getElementById("biscoitoContainer_SbSavage");
+    let biscoitoDiv_SbExtreme = document.getElementById("biscoitoContainer_SbExtreme");
+
+    let biscoitoDiv_ShbSavage = document.getElementById("biscoitoContainer_ShbSavage");
+    let biscoitoDiv_ShbExtreme = document.getElementById("biscoitoContainer_ShbExtreme");
+
+    let biscoitoDiv_EwSavage = document.getElementById("biscoitoContainer_EwSavage");
+    let biscoitoDiv_EwExtreme = document.getElementById("biscoitoContainer_EwExtreme");
+
+    // update savage
+    for (i = 0; i < biscoito.savage2020.length; i++) {
+      if (biscoito.savage2020[i].expansion === 'shb') {
+        biscoitoDiv_ShbSavage.innerHTML += '';
+        biscoitoDiv_ShbSavage.innerHTML += '<div class="group-img"><img src="' + biscoito.savage2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.savage2020[i].dutyName + '</p><p class="duty-level ' + biscoito.savage2020[i].dutyLevel + '">' + biscoito.savage2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.savage2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p1job + ' small"></div>' + biscoito.savage2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p2job + ' small"></div>' + biscoito.savage2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p3job + ' small"></div>' + biscoito.savage2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p4job + ' small"></div>' + biscoito.savage2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p5job + ' small"></div>' + biscoito.savage2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p6job + ' small"></div>' + biscoito.savage2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p7job + ' small"></div>' + biscoito.savage2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p8job + ' small"></div>' + biscoito.savage2020[i].p8.name + '</div></a></div></div>';
+      } else if (biscoito.savage2020[i].expansion === 'sb') {
+        biscoitoDiv_SbSavage.innerHTML += '';
+        biscoitoDiv_SbSavage.innerHTML += '<div class="group-img"><img src="' + biscoito.savage2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.savage2020[i].dutyName + '</p><p class="duty-level ' + biscoito.savage2020[i].dutyLevel + '">' + biscoito.savage2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.savage2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p1job + ' small"></div>' + biscoito.savage2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p2job + ' small"></div>' + biscoito.savage2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p3job + ' small"></div>' + biscoito.savage2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p4job + ' small"></div>' + biscoito.savage2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p5job + ' small"></div>' + biscoito.savage2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p6job + ' small"></div>' + biscoito.savage2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p7job + ' small"></div>' + biscoito.savage2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p8job + ' small"></div>' + biscoito.savage2020[i].p8.name + '</div></a></div></div>';
+      } else if (biscoito.savage2020[i].expansion === 'hw') {
+        biscoitoDiv_HwSavage.innerHTML += '';
+        biscoitoDiv_HwSavage.innerHTML += '<div class="group-img"><img src="' + biscoito.savage2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.savage2020[i].dutyName + '</p><p class="duty-level ' + biscoito.savage2020[i].dutyLevel + '">' + biscoito.savage2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.savage2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p1job + ' small"></div>' + biscoito.savage2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p2job + ' small"></div>' + biscoito.savage2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p3job + ' small"></div>' + biscoito.savage2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p4job + ' small"></div>' + biscoito.savage2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p5job + ' small"></div>' + biscoito.savage2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p6job + ' small"></div>' + biscoito.savage2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p7job + ' small"></div>' + biscoito.savage2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p8job + ' small"></div>' + biscoito.savage2020[i].p8.name + '</div></a></div></div>';
+      } else if (biscoito.savage2020[i].expansion === 'ew') {
+        biscoitoDiv_EwSavage.innerHTML += '';
+        biscoitoDiv_EwSavage.innerHTML += '<div class="group-img"><img src="' + biscoito.savage2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.savage2020[i].dutyName + '</p><p class="duty-level ' + biscoito.savage2020[i].dutyLevel + '">' + biscoito.savage2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.savage2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p1job + ' small"></div>' + biscoito.savage2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p2job + ' small"></div>' + biscoito.savage2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p3job + ' small"></div>' + biscoito.savage2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p4job + ' small"></div>' + biscoito.savage2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p5job + ' small"></div>' + biscoito.savage2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p6job + ' small"></div>' + biscoito.savage2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p7job + ' small"></div>' + biscoito.savage2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.savage2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.savage2020[i].p8job + ' small"></div>' + biscoito.savage2020[i].p8.name + '</div></a></div></div>';
+      }
+    }
+
+    // update extreme
+    for (i = 0; i < biscoito.extreme2020.length; i++) {
+      if (biscoito.extreme2020[i].expansion === 'shb') {
+        biscoitoDiv_ShExtreme.innerHTML += '';
+        biscoitoDiv_ShbExtreme.innerHTML += '<div class="group-img"><img src="' + biscoito.extreme2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.extreme2020[i].dutyName + '</p><p class="duty-level ' + biscoito.extreme2020[i].dutyLevel + '">' + biscoito.extreme2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.extreme2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p1job + ' small"></div>' + biscoito.extreme2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p2job + ' small"></div>' + biscoito.extreme2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p3job + ' small"></div>' + biscoito.extreme2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p4job + ' small"></div>' + biscoito.extreme2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p5job + ' small"></div>' + biscoito.extreme2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p6job + ' small"></div>' + biscoito.extreme2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p7job + ' small"></div>' + biscoito.extreme2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p8job + ' small"></div>' + biscoito.extreme2020[i].p8.name + '</div></a></div></div>';
+      } else if (biscoito.extreme2020[i].expansion === 'sb') {
+        biscoitoDiv_SbExtreme.innerHTML += '';
+        biscoitoDiv_SbExtreme.innerHTML += '<div class="group-img"><img src="' + biscoito.extreme2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.extreme2020[i].dutyName + '</p><p class="duty-level ' + biscoito.extreme2020[i].dutyLevel + '">' + biscoito.extreme2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.extreme2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p1job + ' small"></div>' + biscoito.extreme2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p2job + ' small"></div>' + biscoito.extreme2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p3job + ' small"></div>' + biscoito.extreme2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p4job + ' small"></div>' + biscoito.extreme2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p5job + ' small"></div>' + biscoito.extreme2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p6job + ' small"></div>' + biscoito.extreme2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p7job + ' small"></div>' + biscoito.extreme2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p8job + ' small"></div>' + biscoito.extreme2020[i].p8.name + '</div></a></div></div>';
+      } else if (biscoito.extreme2020[i].expansion === 'hw') {
+        biscoitoDiv_HwExtreme.innerHTML += '';
+        biscoitoDiv_HwExtreme.innerHTML += '<div class="group-img"><img src="' + biscoito.extreme2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.extreme2020[i].dutyName + '</p><p class="duty-level ' + biscoito.extreme2020[i].dutyLevel + '">' + biscoito.extreme2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.extreme2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p1job + ' small"></div>' + biscoito.extreme2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p2job + ' small"></div>' + biscoito.extreme2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p3job + ' small"></div>' + biscoito.extreme2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p4job + ' small"></div>' + biscoito.extreme2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p5job + ' small"></div>' + biscoito.extreme2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p6job + ' small"></div>' + biscoito.extreme2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p7job + ' small"></div>' + biscoito.extreme2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p8job + ' small"></div>' + biscoito.extreme2020[i].p8.name + '</div></a></div></div>';
+      } else if (biscoito.extreme2020[i].expansion === 'arr') {
+        biscoitoDiv_ArrExtreme.innerHTML += '';
+        biscoitoDiv_ArrExtreme.innerHTML += '<div class="group-img"><img src="' + biscoito.extreme2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.extreme2020[i].dutyName + '</p><p class="duty-level ' + biscoito.extreme2020[i].dutyLevel + '">' + biscoito.extreme2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.extreme2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p1job + ' small"></div>' + biscoito.extreme2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p2job + ' small"></div>' + biscoito.extreme2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p3job + ' small"></div>' + biscoito.extreme2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p4job + ' small"></div>' + biscoito.extreme2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p5job + ' small"></div>' + biscoito.extreme2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p6job + ' small"></div>' + biscoito.extreme2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p7job + ' small"></div>' + biscoito.extreme2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p8job + ' small"></div>' + biscoito.extreme2020[i].p8.name + '</div></a></div></div>';
+      } else if (biscoito.extreme2020[i].expansion === 'ew') {
+        biscoitoDiv_EwExtreme.innerHTML += '';
+        biscoitoDiv_EwExtreme.innerHTML += '<div class="group-img"><img src="' + biscoito.extreme2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.extreme2020[i].dutyName + '</p><p class="duty-level ' + biscoito.extreme2020[i].dutyLevel + '">' + biscoito.extreme2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.extreme2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p1job + ' small"></div>' + biscoito.extreme2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p2job + ' small"></div>' + biscoito.extreme2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p3job + ' small"></div>' + biscoito.extreme2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p4job + ' small"></div>' + biscoito.extreme2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p5job + ' small"></div>' + biscoito.extreme2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p6job + ' small"></div>' + biscoito.extreme2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p7job + ' small"></div>' + biscoito.extreme2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.extreme2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.extreme2020[i].p8job + ' small"></div>' + biscoito.extreme2020[i].p8.name + '</div></a></div></div>';
+      }
+    }
+    // update bahamut
+    for (i = 0; i < biscoito.bahamut2020.length; i++) {
+      biscoitoDiv_Bahamut.innerHTML += '';
+      biscoitoDiv_Bahamut.innerHTML += '<div class="group-img"><img src="' + biscoito.bahamut2020[i].url + '" alt=""><div class="duty-info position-1"><p class="name">' + biscoito.bahamut2020[i].dutyName + '</p><p class="duty-level ' + biscoito.bahamut2020[i].dutyLevel + '">' + biscoito.bahamut2020[i].dutyLevel + '</p></div><div class="date position-1">' + biscoito.bahamut2020[i].date + '</div><div class="party-info position-1"><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.bahamut2020[i].p1.id + '"><div class="member"><div class="job ' + biscoito.bahamut2020[i].p1job + ' small"></div>' + biscoito.bahamut2020[i].p1.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.bahamut2020[i].p2.id + '"><div class="member"><div class="job ' + biscoito.bahamut2020[i].p2job + ' small"></div>' + biscoito.bahamut2020[i].p2.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.bahamut2020[i].p3.id + '"><div class="member"><div class="job ' + biscoito.bahamut2020[i].p3job + ' small"></div>' + biscoito.bahamut2020[i].p3.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.bahamut2020[i].p4.id + '"><div class="member"><div class="job ' + biscoito.bahamut2020[i].p4job + ' small"></div>' + biscoito.bahamut2020[i].p4.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.bahamut2020[i].p5.id + '"><div class="member"><div class="job ' + biscoito.bahamut2020[i].p5job + ' small"></div>' + biscoito.bahamut2020[i].p5.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.bahamut2020[i].p6.id + '"><div class="member"><div class="job ' + biscoito.bahamut2020[i].p6job + ' small"></div>' + biscoito.bahamut2020[i].p6.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.bahamut2020[i].p7.id + '"><div class="member"><div class="job ' + biscoito.bahamut2020[i].p7job + ' small"></div>' + biscoito.bahamut2020[i].p7.name + '</div></a><a href="https://na.finalfantasyxiv.com/lodestone/character/' + biscoito.bahamut2020[i].p8.id + '"><div class="member"><div class="job ' + biscoito.bahamut2020[i].p8job + ' small"></div>' + biscoito.bahamut2020[i].p8.name + '</div></a></div></div>';
+    }
+  },
 }
 
 // ------------------------------------------------
@@ -148,6 +200,7 @@ var kuroyozakura = characterBuilder("Kuro Yozakura", "https://img2.finalfantasyx
 var mattconstante = characterBuilder("Matt Constante", "https://img2.finalfantasyxiv.com/f/0df6a5ce5a440f111c0e65143dbf75cf_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1657035117", 30204464, "ally")
 var barilanshs = characterBuilder("Bari Lanshs", "https://img2.finalfantasyxiv.com/f/8dd5700f3ac9487649e69cf23a0b5206_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1657037449", 8555044, "ally")
 var gojiracaipira = characterBuilder("Gojira Caipira", "https://img2.finalfantasyxiv.com/f/987051a015b046845a40ff1d5e446e9d_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1657036712", 28238178, "ally")
+var chloefacca = characterBuilder("Chloe Facca", "https://img2.finalfantasyxiv.com/f/f095e0eecc1b77173f4d31187e1b8e18_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1657042496", 30344429, "ally")
 
 // char list
 var characterList = []
@@ -466,12 +519,30 @@ gallery.social2020.push(tengu_stack);
 // ------------------------------------------------
 // biscoito database
 // ------------------------------------------------
-function newBiscoito_8Player(expansion, dutyName, dutyLevel, foto, p1, p1job, p2, p2job, p3, p3job, p4, p4job, p5, p5job, p6, p6job, p7, p7job, p8, p8job) {
+var biscoito = {
+  bahamut2020: [],
+  extreme2020: [],
+  savage2020: [],
+  ultimate2020: [],
+  
+  bahamut2021: [],
+  extreme2021: [],
+  savage2021: [],
+  ultimate2021: [],
+  
+  bahamut2022: [],
+  extreme2022: [],
+  savage2022: [],
+  ultimate2022: [],
+};
+
+function newBiscoito_8Player(expansion, date, dutyName, dutyLevel, url, p1, p1job, p2, p2job, p3, p3job, p4, p4job, p5, p5job, p6, p6job, p7, p7job, p8, p8job) {
   return biscoitos = {
     'expansion' : expansion,
+    'date' : date,
     'dutyName' : dutyName,
     'dutyLevel' : dutyLevel,
-    'foto' : foto,
+    'url' : url,
     'p1' : p1,
     'p1job' : p1job,
     'p2' : p2,
@@ -491,6 +562,14 @@ function newBiscoito_8Player(expansion, dutyName, dutyLevel, foto, p1, p1job, p2
   }
 }
 
+// new biscoito
+var e5s_kenji = newBiscoito_8Player("shb", "2020", "Eden's Verse: Fulmination", "savage", "img/screenshots/biscoito/2020/e5s-kenji.png", kuroyozakura, "pld", chloefacca, "war", yesodketer, "whm", makisuguis, "ast", barilanshs, "sam", cassandradlasol, "drg", rirururiru, "brd", ygglart, "rdm")
+var t9_kenji = newBiscoito_8Player("arr", "16/06/2020", "Second Coil of Bahamut, Turn 4", "normal", "img/screenshots/biscoito/2020/t9-kenji.png", kuroyozakura, "pld", ryodanonoko, "war", lilinawada, "ast", nyardodix, "whm", kaliweiss, "drg", cassandradlasol, "brd", rirururiru, "brd", makisuguis, "smn")
+
+// push into gallery
+biscoito.bahamut2020.push(t9_kenji)
+biscoito.savage2020.push(e5s_kenji)
+
 // ------------------------------------------------
 // gallery pop-up view
 // ------------------------------------------------
@@ -509,48 +588,6 @@ function fotoClick(e,el) {
 
 function closePopUpImage() {
   document.querySelector('.pop-up-img').style.display = 'none'
-}
-
-// ------------------------------------------------
-// new biscoito var
-// ------------------------------------------------
-function newBiscoito_8Player(dutyName, dutyLevel, date, screenshot, p1nick, p1job, p1lodestone, p2nick, p2job, p2lodestone, p3nick, p3job, p3lodestone, p4nick, p4job, p4lodestone, p5nick, p5job, p5lodestone, p6nick, p6job, p6lodestone, p7nick, p7job, p7lodestone, p8nick, p8job, p8lodestone) {
-  biscoito.dutyName.push(dutyName);
-  biscoito.dutyLevel.push(dutyLevel);
-  biscoito.date.push(date);
-  biscoito.screenshot.push(screenshot);
-
-  biscoito.player1.nick.push(p1nick);
-  biscoito.player1.job.push(p1job);
-  biscoito.player1.id.push(p1lodestone);
-  
-  biscoito.player2.nick.push(p2nick);
-  biscoito.player2.job.push(p2job);
-  biscoito.player2.id.push(p2lodestone);
-  
-  biscoito.player3.nick.push(p3nick);
-  biscoito.player3.job.push(p3job);
-  biscoito.player3.id.push(p3lodestone);
-  
-  biscoito.player4.nick.push(p4nick);
-  biscoito.player4.job.push(p4job);
-  biscoito.player4.id.push(p4lodestone);
-  
-  biscoito.player5.nick.push(p5nick);
-  biscoito.player5.job.push(p5job);
-  biscoito.player5.id.push(p5lodestone);
-  
-  biscoito.player6.nick.push(p6nick);
-  biscoito.player6.job.push(p6job);
-  biscoito.player6.id.push(p6lodestone);
-  
-  biscoito.player7.nick.push(p7nick);
-  biscoito.player7.job.push(p7job);
-  biscoito.player7.id.push(p7lodestone);
-  
-  biscoito.player8.nick.push(p8nick);
-  biscoito.player8.job.push(p8job);
-  biscoito.player8.id.push(p8lodestone);
 }
 
 // ------------------------------------------------
@@ -585,5 +622,5 @@ window.onload = function () {
   display.updateFotos_Duty();
 
   // atualiza os biscoito
-  // display.updateBiscoito();
+  display.updateBiscoito_2020();
 }
