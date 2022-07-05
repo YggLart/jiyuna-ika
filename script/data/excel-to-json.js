@@ -10,12 +10,16 @@ function genFotos() {
     const fotosData = {}
     
     for (const foto of fotos) {
-        const fileName = foto['fileName'];
-        const url = foto['url']
-        const date = foto ['date']
-        const description = foto['description']
-        const sendBy = foto['sendBy']
-        const gallery = foto['gallery']
+        let fileName = foto['fileName'];
+        let url = foto['url']
+        let date = foto ['date']
+        let description = foto['description']
+        let sendBy = foto['sendBy']
+        let gallery = foto['gallery']
+
+        if (description === undefined) {
+            description = ''
+        }
     
         console.log('var ' + fileName + ' = newFoto("'+ date + '", "'+ url + '", '+ sendBy + ', "'+ description + '", "'+ gallery +'")')
 
