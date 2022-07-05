@@ -112,6 +112,10 @@ function newFotoFromInput() {
 // ------------------------------------------------
 window.onload = function () {
 
+
+
+
+
   newFoto("img/screenshots/fotos/2020/duty/mapas-matt.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
   newFoto("img/screenshots/fotos/2020/eventos/aniversariomega-vic.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
   newFoto("img/screenshots/fotos/2020/achievements/firebird-kenji.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
@@ -123,29 +127,6 @@ window.onload = function () {
   display.updateFotosAchievements();
   display.updateBiscoito();
 }
-
-// ------------------------------------------------
-// gallery pop-up view
-// ------------------------------------------------
-function reply_click(e,el) {
-  e = e || window.event;
-
-  document.querySelector('.pop-up-img').style.display = 'flex'
-  document.querySelector('.pop-up-img img').src = el.getAttribute('src');
-  
-  console.log(e); //will be the event
-  console.log(el); //we be the dom element 
-}
-
-function closePopUpImage() {
-  document.querySelector('.pop-up-img').style.display = 'none'
-}
-
-
-// document.querySelectorAll('.achievements-container > .foto > img').forEach(image => {
-//   image.onclick = () => {
-//   }
-// });
 
 // ------------------------------------------------
 // page update
@@ -166,19 +147,126 @@ function checkHash() {
 };
 
 // ------------------------------------------------
-// gallery : expand pic
+// character builder
 // ------------------------------------------------
+function characterBuilder(name, avatar, lodestone) {
+  return character = {
+    'name' : name,
+    'avatar' : avatar,
+    'lodestone' : lodestone,
+  }
+}
+
+function apiFake(id) {
+  switch (id) {
+    case 19210263:
+      return characterBuilder("Enki", "https://img2.finalfantasyxiv.com/f/a23316227544639e9625a73b5ccc453c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656806135", id);
+    case 29518378:
+      return characterBuilder("Ygg", "https://img2.finalfantasyxiv.com/f/be2bf245a304ed40ad0ca79c6ad8d7bb_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656804430", id);
+    }
+    case 29518378:
+      
+}
+
+var enki = apiFake(19210263);
+var ygg = apiFake(29518378);
+
+var characterList = []
+
+characterList.push(enki);
+characterList.push(ygg);
 
 // ------------------------------------------------
-// new fotos var
+// fotos database
 // ------------------------------------------------
-function newFoto(url, date, sendBy, lodestone, description, gallery) {
-  fotos.url.push(url);
-  fotos.date.push(date);
-  fotos.sendBy.push(sendBy);
-  fotos.lodestone.push(lodestone);
-  fotos.description.push(description);
-  fotos.gallery.push(gallery);
+function newFoto(gallery, date, url, sendBy, lodestone, description) {
+  return fotos = {
+    'gallery' : gallery,
+    'date' : date,
+    'url' : url,
+    'sendBy' : sendBy,
+    'lodestone' : lodestone,
+    'description' : description
+  }
+}
+
+function fotosDatabase (id) {
+  switch (id) {
+    case 0:
+    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[1].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    case 1:
+    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[0].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    case 2:
+    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[1].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    case 3:
+    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[0].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    case 4:
+    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[1].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    case 5:
+    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[0].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+  }
+}
+
+var arrT9_0 = fotosDatabase(0);
+var endgame2 = fotosDatabase(2);
+var endgame3 = fotosDatabase(3);
+var endgame4 = fotosDatabase(4);
+
+var photoList = [];
+photoList.push(endgame1);
+photoList.push(endgame2);
+photoList.push(endgame3);
+photoList.push(endgame4);
+
+// ------------------------------------------------
+// biscoito database
+// ------------------------------------------------
+function newBiscoito_8Player(expansion, dutyName, dutyLevel, foto, p1, p1job, p2, p2job, p3, p3job, p4, p4job, p5, p5job, p6, p6job, p7, p7job, p8, p8job)
+  return biscoitos = {
+    'expansion' : expansion,
+    'dutyName' : dutyName,
+    'dutyLevel' : dutyLevel,
+    'foto' : foto,
+    'p1' : p1,
+    'p1job' : p1job,
+    'p2' : p2,
+    'p2job' : p2job,
+    'p2' : p3,
+    'p2job' : p3job,
+    'p2' : p4,
+    'p2job' : p4job,
+    'p2' : p5,
+    'p2job' : p5job,
+    'p2' : p6,
+    'p2job' : p6job,
+    'p2' : p7,
+    'p2job' : p7job,
+    'p2' : p8,
+    'p2job' : p8job,
+  }
+  
+function biscoitoDatabase(id) {
+  switch (id) {
+    case 0:
+      return newBiscoito_8Player('A Realm Reborn', "Second Coil of Bahamut - Turn 9", "Normal", photoList.arrT9_0, kenji,   )
+  }
+}
+
+// ------------------------------------------------
+// gallery pop-up view
+// ------------------------------------------------
+function reply_click(e,el) {
+  e = e || window.event;
+
+  document.querySelector('.pop-up-img').style.display = 'flex'
+  document.querySelector('.pop-up-img img').src = el.getAttribute('src');
+  
+  console.log(e); //will be the event
+  console.log(el); //we be the dom element 
+}
+
+function closePopUpImage() {
+  document.querySelector('.pop-up-img').style.display = 'none'
 }
 
 // ------------------------------------------------
