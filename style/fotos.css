@@ -232,14 +232,14 @@
     backdrop-filter: blur(1px);
 }
 
-.feat-1 { position: relative; background-image: url('../img\screenshots\fotos\2020\achievements\torrekugane-kenji.png'); }
-.feat-2 { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
-.feat-3 { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
-.feat-4 { position: relative; background-image: url('../img/screenshots/fotos/2020/raid/bahamut01.png'); }
+.feat-1 { position: relative; background-image: url('../img/screenshots/fotos/2020/eventos/aniversarioenki-matt1.png'); }
+.feat-2 { position: relative; background-image: url('../img/screenshots/fotos/2020/social/kenji-coldnight.png'); }
+.feat-3 { position: relative; background-image: url('../img/screenshots/fotos/2020/achievements/torrekugane-kenji.png'); }
+.feat-4 { position: relative; background-image: url('../img/screenshots/fotos/2020/duty/mapas-bari.png'); }
 
 
 /* fotos */
-.achievements-container {
+.foto-gal {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "exceljs": "^4.3.0",
+    "fs": "^0.0.1-security",
+    "jsontoxml": "^1.0.1",
+    "slsx": "^0.0.3",
+    "xlsx": "^0.18.5"
+  }
+}
