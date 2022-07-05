@@ -3,8 +3,8 @@ display = {
     var fotosAchievement_Div = document.getElementById("fotosAchievement_Container");
     fotosAchievement_Div.innerHTML = "";
 
-    for (i = 0; i < fotos.url.length; i++) {
-      fotosAchievement_Div.innerHTML += '<div class="foto"> <img class="image" onClick="reply_click(event,this)"  src="' + fotos.url[i] + '" alt=""> <div class="send-by" id="fotos' + fotos.gallery[i] + '_SendBy"> Enviado por: <a id="fotos' + fotos.gallery[i] + '_lodestone" href="https://na.finalfantasyxiv.com/lodestone/character/' + fotos.lodestone[i] + '"> ' + fotos.sendBy[i] + ' </a> </div><div class="description" id="fotos' + fotos.gallery[i] + '_Description"> ' + fotos.description[i] + ' </div><div class="date" id="fotos' + fotos.gallery[i] + '_Date"> ' + fotos.date[i] + ' </div></div>';
+    for (i=0; i < photoList.length; i++) {
+      fotosAchievement_Div.innerHTML += '<div onClick="reply_click(event,this)" class="foto"> <img class="image" src="' + photoList[i].url + '" alt=""> <div class="send-by" id="fotos' + photoList[i].gallery + '_SendBy"> Enviado por: <a id="fotos' + photoList[i].gallery + '_lodestone" href="https://na.finalfantasyxiv.com/lodestone/character/' + photoList[i].lodestone + '"> ' + photoList[i].sendBy + ' </a> </div><div class="description" id="fotos' + photoList[i].gallery + '_Description"> ' + photoList[i].description + ' </div><div class="date" id="fotos' + photoList[i].gallery + '_Date"> ' + photoList[i].date + ' </div></div>';
     }
   },
 
@@ -92,7 +92,7 @@ var biscoito = {
 
 var form = document.getElementById('newFotoForm');
 function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
+// form.addEventListener('submit', handleForm);
 
 function newFotoFromInput() {
   var outputFotos = document.getElementById("outputFotos");
@@ -105,27 +105,6 @@ function newFotoFromInput() {
   let inputGallery = document.getElementById("inputGallery").value;
   
   outputFotos.innerHTML += 'newFoto("' + inputURL +'", "' + inputDate + '", "' + inputSendBy + '", "' + inputLodestone + '", "' + inputDescription + '", "' + inputGallery + '"); <br/>';
-}
-
-// ------------------------------------------------
-// onload
-// ------------------------------------------------
-window.onload = function () {
-
-
-
-
-
-  newFoto("img/screenshots/fotos/2020/duty/mapas-matt.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newFoto("img/screenshots/fotos/2020/eventos/aniversariomega-vic.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newFoto("img/screenshots/fotos/2020/achievements/firebird-kenji.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newFoto("img/screenshots/fotos/2020/duty/eureka-kenji.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newFoto("img/screenshots/fotos/2020/achievements/boreas-matt.jpg", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newFoto("img/screenshots/fotos/2020/duty/mapas-matt4.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
-  newBiscoito_8Player("Alexander", "savage", "16/16/9000", "img/screenshots/fotos/cover/cover 02.jpg", "oroboros", "war", "", "aaa", "pld", "", "bbb", "drk", "", "ccc", "whm", "", "ddd", "ast", "", "eee", "drg", "", "fff", "brd", "", "qwe", "mnk", "")
-
-  display.updateFotosAchievements();
-  display.updateBiscoito();
 }
 
 // ------------------------------------------------
@@ -159,22 +138,92 @@ function characterBuilder(name, avatar, lodestone) {
 
 function apiFake(id) {
   switch (id) {
-    case 19210263:
-      return characterBuilder("Enki", "https://img2.finalfantasyxiv.com/f/a23316227544639e9625a73b5ccc453c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656806135", id);
-    case 29518378:
-      return characterBuilder("Ygg", "https://img2.finalfantasyxiv.com/f/be2bf245a304ed40ad0ca79c6ad8d7bb_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656804430", id);
-    }
-    case 29518378:
-      
-}
+      // staff
+      case 19210263:
+        return characterBuilder("Kurohane Enki", "https://img2.finalfantasyxiv.com/f/a23316227544639e9625a73b5ccc453c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656806135", id);
+      case 29518378:
+        return characterBuilder("Ygg Lart", "https://img2.finalfantasyxiv.com/f/be2bf245a304ed40ad0ca79c6ad8d7bb_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656804430", id);
+      case 25899347:
+        return characterBuilder("Ryodan Onoko", "https://img2.finalfantasyxiv.com/f/239027da291968bae2ee941c82eecfd9_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656291795", id);
+      case 11515265:
+        return characterBuilder("Nyar Dodix", "https://img2.finalfantasyxiv.com/f/be2bf245a304ed40ad0ca79c6ad8d7bb_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656804430", id);
+      case 29722755:
+        return characterBuilder("Cassandra D'la'Sol", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+      case 29722755:
+        return characterBuilder("Eir Mahariel", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+      case 29722755:
+        return characterBuilder("Lilina Wada", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+      case 29722755:
+        return characterBuilder("Riruru Riru", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+  
+      // companheiros
+      case 29722755:
+        return characterBuilder("Scarlet Delaire", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+      case 29722755:
+        return characterBuilder("O'riohn Tia", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+      case 29722755:
+        return characterBuilder("Ramza Mal", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+      case 29722755:
+        return characterBuilder("Y'esod Keter", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+      case 29722755:
+      return characterBuilder("Faeru Aridan", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+      case 29722755:
+        return characterBuilder("Lyphas Borwan", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+      case 29722755:
+        return characterBuilder("Inqui Healhands", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
 
+      // players cadastrados
+      case 27433867:
+        return characterBuilder("Maki Suguis", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+      case 28583734:
+        return characterBuilder("Kuro Yozakura", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+      case 29722755:
+        return characterBuilder("Ramza Mal", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+      case 29722755:
+        return characterBuilder("Scarlet Delaire", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+      case 29722755:
+        return characterBuilder("O'riohn Tia", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);
+      case 29722755:
+        return characterBuilder("Ramza Mal", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+      case 29722755:
+        return characterBuilder("Ramza Mal", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+      case 29722755:
+        return characterBuilder("Ramza Mal", "https://img2.finalfantasyxiv.com/f/de26e452bf1de6309f9c8d70dfc2c55c_be20385e18333edb329d4574f364a1f0fc0_96x96.jpg?1656288936", id);  
+  }
+}
+// staff
 var enki = apiFake(19210263);
 var ygg = apiFake(29518378);
+var enki = apiFake(19210263);
+var ygg = apiFake(29518378);
+var ryodan = apiFake(25899347);
+var nyar = apiFake(11515265);
+var kali = apiFake(29518378);
+var cassandra = apiFake(29722755);
+var eir = apiFake(29518378);
+var lilina = apiFake(29518378);
+var riruru = apiFake(29518378);
+
+// companheiros
+var scarlet = apiFake(29518378);
+var orion = apiFake(29518378);
+var ramza = apiFake(29518378);
+var yesod = apiFake(29518378);
+var faeru = apiFake(29518378);
+var lyphas = apiFake(29518378);
+var inqui = apiFake(29518378);
+
+// 
+var maki_suguis = apiFake(27433867);
+var kuro_yozakura = apiFake(28583734);
 
 var characterList = []
 
 characterList.push(enki);
 characterList.push(ygg);
+
+characterList.push(maki_suguis);
+characterList.push(kuro_yozakura);
 
 // ------------------------------------------------
 // fotos database
@@ -193,35 +242,35 @@ function newFoto(gallery, date, url, sendBy, lodestone, description) {
 function fotosDatabase (id) {
   switch (id) {
     case 0:
-    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[1].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    return newFoto("Endgame", "16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", maki_suguis.name, maki_suguis.lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
     case 1:
-    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[0].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    return newFoto("Endgame" ,"16/06/2020", "img/screenshots/biscoito/2020/2020-t1-kuro.png", kuro_yozakura.name, kuro_yozakura.lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
     case 2:
-    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[1].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    return newFoto("Endgame", "16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[1].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
     case 3:
-    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[0].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    return newFoto("Endgame", "16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[0].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
     case 4:
-    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[1].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    return newFoto("Endgame", "16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[1].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
     case 5:
-    return newFoto("Endgame","16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[0].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
+    return newFoto("Endgame", "16/06/2020", "img/screenshots/biscoito/2020/2020-t9-kenji.png", characterList[0].name, characterList[1].lodestone, "Primeiro grupo da Ika à completar T9 no Nv50!" )
   }
 }
 
 var arrT9_0 = fotosDatabase(0);
-var endgame2 = fotosDatabase(2);
-var endgame3 = fotosDatabase(3);
-var endgame4 = fotosDatabase(4);
+var e5s_kuro = fotosDatabase(1);
+// var endgame3 = fotosDatabase(3);
+// var endgame4 = fotosDatabase(4);
 
 var photoList = [];
-photoList.push(endgame1);
-photoList.push(endgame2);
-photoList.push(endgame3);
-photoList.push(endgame4);
+photoList.push(arrT9_0);
+photoList.push(e5s_kuro);
+// photoList.push(endgame3);
+// photoList.push(endgame4);
 
 // ------------------------------------------------
 // biscoito database
 // ------------------------------------------------
-function newBiscoito_8Player(expansion, dutyName, dutyLevel, foto, p1, p1job, p2, p2job, p3, p3job, p4, p4job, p5, p5job, p6, p6job, p7, p7job, p8, p8job)
+function newBiscoito_8Player(expansion, dutyName, dutyLevel, foto, p1, p1job, p2, p2job, p3, p3job, p4, p4job, p5, p5job, p6, p6job, p7, p7job, p8, p8job) {
   return biscoitos = {
     'expansion' : expansion,
     'dutyName' : dutyName,
@@ -244,7 +293,8 @@ function newBiscoito_8Player(expansion, dutyName, dutyLevel, foto, p1, p1job, p2
     'p2' : p8,
     'p2job' : p8job,
   }
-  
+}
+
 function biscoitoDatabase(id) {
   switch (id) {
     case 0:
@@ -259,8 +309,11 @@ function reply_click(e,el) {
   e = e || window.event;
 
   document.querySelector('.pop-up-img').style.display = 'flex'
-  document.querySelector('.pop-up-img img').src = el.getAttribute('src');
-  
+  document.querySelector('.pop-up-img img').src = el.querySelector('img').getAttribute('src');
+  document.querySelector('.pop-up-img .send-by').innerHTML = el.querySelector('.send-by').innerHTML;
+  document.querySelector('.pop-up-img .description').innerHTML = el.querySelector('.description').innerHTML;
+  document.querySelector('.pop-up-img .date').innerHTML = el.querySelector('.date').innerHTML;  
+
   console.log(e); //will be the event
   console.log(el); //we be the dom element 
 }
@@ -323,3 +376,19 @@ function responsiveMenu() {
     e.classList.toggle('active');
   }
 
+// ------------------------------------------------
+// onload
+// ------------------------------------------------
+window.onload = function () {
+
+  // newFoto("img/screenshots/fotos/2020/duty/mapas-matt.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  // newFoto("img/screenshots/fotos/2020/eventos/aniversariomega-vic.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  // newFoto("img/screenshots/fotos/2020/achievements/firebird-kenji.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  // newFoto("img/screenshots/fotos/2020/duty/eureka-kenji.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  // newFoto("img/screenshots/fotos/2020/achievements/boreas-matt.jpg", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  // newFoto("img/screenshots/fotos/2020/duty/mapas-matt4.png", "2020", "Matt", "30204464", "Ygg, Kuro, Matt, Vic e Etienne posando com seus Boreas.", "Achievement");
+  // newBiscoito_8Player("Alexander", "savage", "16/16/9000", "img/screenshots/fotos/cover/cover 02.jpg", "oroboros", "war", "", "aaa", "pld", "", "bbb", "drk", "", "ccc", "whm", "", "ddd", "ast", "", "eee", "drg", "", "fff", "brd", "", "qwe", "mnk", "")
+
+  display.updateFotosAchievements();
+  display.updateBiscoito();
+}
