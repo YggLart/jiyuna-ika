@@ -1,0 +1,117 @@
+---------------------
+index
+---------------------
+nav
+section #hero
+    div.img #hero-img
+        div.description
+        p #hero-img-tag
+        p #hero-img-description
+        p #hero-img-date
+    div.flex
+        div
+            h1
+            h3
+        div
+            h5
+            button
+                img
+
+---------------------
+about
+---------------------
+nav
+section #about .page
+    h2
+    div.img
+    div.text
+    div.cookie
+    div.text
+    div.staffs #mod
+    div.staffs #helpers
+    div.img .ikasona
+    div.text
+section #footer
+
+---------------------
+photos
+---------------------
+nav
+section #photos .page
+    h2
+    div.flex
+        a.featured
+            h5
+            h4
+        div.galleries
+            h5
+            div.gallery
+section #footer 
+
+---------------------
+cookies
+---------------------
+nav
+section #cookies .page
+    h2
+    div.cookies-select
+        div.arr
+            h3
+            a
+            a
+        div.hw
+            h3
+            a
+            a
+        div.sb
+            h3
+            a
+            a
+        div.shb
+            h3
+            a
+            a
+        div.ew
+            h3
+            a
+            a
+
+section #footer
+
+===== cookies-XXX-trial-20XX
+nav
+section #cookies-XXX-trial-20XX
+    h2
+    div.cookies-gallery
+        div.cookie
+section #footer
+
+---------------------
+census
+---------------------
+nav
+section #census .page
+    h2
+    p
+    div.flex.wrap
+        a.date
+        a.date
+        a.date
+
+section #footer
+
+===== census-20XX 
+nav
+section #census-20XX .census
+    div.flex.space-between
+        h2
+        div.flex
+        a.date
+        a.date
+    p
+    img
+    img
+    [..]
+section #footer
+
+
