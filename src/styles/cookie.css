@@ -31,6 +31,7 @@
 
 .cookie-container:hover > .duty { /* mouse over */
     background: linear-gradient(102.83deg, rgba(213, 213, 213, 0.25) -98.71%, rgba(0, 0, 0, 0) 103.17%), rgba(0, 0, 0, .7);
+    padding: 1rem 2rem;
 }
 
 .cookie-container > .party {  /* party structure */ 

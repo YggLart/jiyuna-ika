@@ -20,9 +20,21 @@ export default function About() {
             <Img />
             <Text className="housing" />
           </div>
-          <div className="box flex">
+          <div className="box card">
             <Img />
-            <Text paragraphs={1}/>
+            <Text />
+          </div>
+          <div className="box card reverse">
+            <Img />
+            <Text />
+          </div>
+          <div className="box card">
+            <Img />
+            <Text />
+          </div>
+          <div className="box card reverse">
+            <Img />
+            <Text />
           </div>
         </div>
     )

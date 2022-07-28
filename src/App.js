@@ -1,4 +1,5 @@
 import './index.css';
+import './styles/page-structure.css';
 
 import BackgroundGlow from './components/BackgroundGlow';
 import Navbar from './components/Navbar';
