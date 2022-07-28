@@ -49,7 +49,7 @@ body {
   letter-spacing: 1px;
 }
 
-.page-container {
+.page-container { /* whole page */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +57,7 @@ body {
   gap: 10rem;
 }
 
-.background-glow {
+.background-glow { /* background effect */ 
   z-index: -10;
   top: -20rem;
   width: 100vw;
@@ -73,7 +73,7 @@ body {
   );
 }
 
-.background-glow::after {
+.background-glow::after { /* background effect */ 
   content: '';
   position: absolute;
   right: 0;
@@ -86,9 +86,9 @@ body {
 
 }
 
-.page-width {
+.page-width { /* page container */ 
   width: 80vw;
-  max-width: 1440px;
+  max-width: 1280px;
   position: relative;
 
   display: flex;
@@ -96,7 +96,7 @@ body {
   gap: 10rem;
 }
 
-.page-box {
+.page-box { /* boxes container */ 
   max-width: 1280px;
   width: 90vw;
   position: relative;
@@ -106,7 +106,7 @@ body {
   flex-direction: column;
 }
 
-.page-box .box {
+.page-box .box { /* individual box */ 
   max-width: 1280px;
   overflow: hidden;
 
@@ -114,6 +114,22 @@ body {
   outline: 1px solid rgb(var(--clr-light-gray));
   background: var(--bg-gradient);
   box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
+}
+
+.page-box .box.flex > .img { /* individual box */ 
+  width: 100%;
+}
+
+.page-box .box.flex > .text {
+  width: 60%;
+}
+
+.footer { /* page end */ 
+  padding: 5rem 0 10rem;
+  font-family: var(--ff-barlow-condensed);
+  font-weight: 100;
+  font-size: 2rem;
+  color: rgb(var(--clr-light), .5 )
 }
 
 /* ---------------------------------------------------------- */

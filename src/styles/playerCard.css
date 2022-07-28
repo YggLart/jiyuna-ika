@@ -37,6 +37,7 @@
 .staff > .img {
     width: 7rem;
     height: 7rem;
+    position: relative;
     border-radius: 1rem;
     overflow: hidden;
     transition: inherit;
@@ -68,4 +69,27 @@
 
 .staff:hover > .img {
     outline: solid 1px rgb(var(--clr-secondary));
+}
+
+.staff > .img::after { 
+    content:'';
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: .5rem;
+    bottom: .5rem;
+    border-radius: 100%;
+    opacity: 0;
+    transition: .3s;
+
+    background-image: url('../../public/img/communism.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: initial;
+    background-color: rgb(var(--clr-primary), .7);
+    outline: 1px solid rgb(var(--clr-secondary));
+ }
+
+.staff:hover > .img::after {
+    opacity: 1;
 }
