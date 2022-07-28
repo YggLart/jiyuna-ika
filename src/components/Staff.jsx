@@ -2,7 +2,7 @@ import PlayerCard from "./PlayerCard"
 
 export default function Staff() {
     return (
-        <div className="staff">
+        <div className="flex wrap j-around gap-2">
             <PlayerCard />
             <PlayerCard />
             <PlayerCard />
