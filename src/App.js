@@ -8,9 +8,9 @@ import About from './components/About';
 function App() {
   return (
     <div className="page-container">
+      <BackgroundGlow />
+      <Navbar />
       <div className="page-width">
-        <BackgroundGlow />
-        <Navbar />
         <Hero />
         <About />
       </div>

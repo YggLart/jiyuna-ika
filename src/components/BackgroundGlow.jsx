@@ -1,3 +1,7 @@
 export default function BackgroundGlow() {
-    return <div className="background-glow"></div>;
+    return (
+        <>
+          <div className="background-glow"></div>
+        </>
+    );
 }
