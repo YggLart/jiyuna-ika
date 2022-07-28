@@ -18,11 +18,11 @@ export default function About() {
           <Staff />
           <div className="box">
             <Img />
-            <Text class="housing" />
+            <Text className="housing" />
           </div>
           <div className="box flex">
             <Img />
-            <Text />
+            <Text paragraphs={1}/>
           </div>
         </div>
     )
