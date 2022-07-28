@@ -1,0 +1,50 @@
+.hero-container {
+    width: 100%;
+    min-height: 100vh;
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .img {
+    height: 70vh;
+    max-width: 60%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  
+    border: 1px solid rgba(92, 92, 92, 0.5);
+    filter: drop-shadow(-2px 9px 5px rgba(22, 22, 22, 0.25));
+    border-radius: 0px 0px 999px 999px;
+  }
+  
+  .img img {
+    width: auto;
+    height: 100%;
+  }
+  
+  .logo-ika-container {
+    bottom: 2rem;
+    z-index: 5;
+  
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo-ika-img {
+    width: 100%;
+    height: 30vh;
+  
+    /* margin-top: -10vh; */
+  }
+  
+  .logo-ika-container p {
+    margin-top: 2rem;
+  }
+  

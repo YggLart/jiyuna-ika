@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+:root {
+  --clr-dark: rgb(14, 14, 16, var(--clr-opacity, 1));
+  --clr-light: rgb(224, 224, 224, var(--clr-opacity, 1));
+
+  --ff-barlow: "Barlow", sans-serif;
+  --ff-barlow-condensed: "Barlow Condensed", sans-serif;
+  --ff-barlow-semi-condensed: "Barlow Semi Condensed", sans-serif;
+  --ff-oswald: "Oswald", sans-serif;
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-roboto-condensed: "Roboto Condensed", sans-serif;
+}
+
+/* ---------------------------------------------------------- */
+/* Resets                                                     */
+/* ---------------------------------------------------------- */
+
+body,
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------- */
+/* page config                                                */
+/* ---------------------------------------------------------- */
+
+body {
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  font-family: var(--ff-barlow);
+
+  letter-spacing: 1px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.background-glow {
+  z-index: -10;
+  top: -20rem;
+  width: 100vw;
+  height: 110vh;
+  transform: scale(1.2);
+  position: fixed;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 15%,
+    rgba(14, 14, 16, 0) 50%,
+    rgba(14, 14, 16, 0) 85%
+  );
+}
+
+.page-width {
+  width: 80vw;
+  max-width: 1440px;
+}
+
+.page-box {
+  max-width: 1440px;
+  width: 90vw;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.page-box .box {
+  max-width: 1280px;
+
+  border-radius: 1rem;
+  outline: 1px solid #4F4F4F;
+
+}
+
+/* ---------------------------------------------------------- */
+/* Flex classes                                               */
+/* ---------------------------------------------------------- */
+.flex {
+  display: flex;
+}
+.flex.col {
+  flex-direction: column;
+}
+.flex.a-center {
+  align-items: center;
+}

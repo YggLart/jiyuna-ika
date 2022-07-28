@@ -1,0 +1,156 @@
+.cookie-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    outline: 1px solid #4F4F4F;
+}
+
+.cookie-container > img {  /* cookie img */ 
+    z-index: -1;
+    max-width: 1280px;
+}
+
+.cookie-container > .duty {  /* duty structure */ 
+    width: 100%;
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+    border-radius: .5rem .5rem 0 0;
+    transition: .5s;
+
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    outline: solid 1px rgb(79, 79, 79, 1);
+    background: linear-gradient(102.83deg, rgba(213, 213, 213, 0.25) -98.71%, rgba(0, 0, 0, 0) 103.17%), rgba(0, 0, 0, .2);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .6);
+}
+
+.cookie-container:hover > .duty { /* mouse over */
+    background: linear-gradient(102.83deg, rgba(213, 213, 213, 0.25) -98.71%, rgba(0, 0, 0, 0) 103.17%), rgba(0, 0, 0, .7);
+}
+
+.cookie-container > .party {  /* party structure */ 
+    width: 100%;
+    padding: .2rem;
+    box-sizing: border-box;
+
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .2rem;
+    transition: .5s;
+}
+
+.cookie-container:hover > .party {  /* mouse over */ 
+    padding: 1rem;
+    gap: .5rem;
+}
+
+/* ---------------------------- */
+/* player config                */
+/* ---------------------------- */
+
+.cookie-container > .party > .player {  /* player structure */ 
+    min-width: 13rem;
+}
+
+.cookie-container > .party > .player > button {  /* player button structure */ 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 13rem;
+    
+    position: relative;
+
+    border: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cookie-container > .party > .player > button > .job { /* player job */ 
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+    border-radius: .5rem;
+    transition: inherit;
+
+    position: absolute;
+    left:.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid rgb(79, 79, 79, 0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0);
+}
+
+.cookie-container > .party > .player > button > .job.tank { background: rgb(57, 75, 165, 0); }
+.cookie-container:hover > .party > .player > button > .job.tank { background: rgb(57, 75, 165, 1); }
+
+.cookie-container > .party > .player > button > .job > img { /* player job img */ 
+    width: 1.5rem;
+}
+
+.cookie-container > .party > .player > button > .name { /* player name */ 
+    min-width: 13rem;
+    padding: .4rem .8rem .4rem 2.3rem;
+    margin-left: 0;
+    border-radius: .5rem;
+    text-align: left;
+    transition: inherit;
+    
+    letter-spacing: 1px;
+
+    background: linear-gradient(102.83deg, rgba(213, 213, 213, 0.39) -98.71%, rgba(0, 0, 0, 0) 103.17%), rgba(0, 0, 0, .1);
+    outline: 1px solid rgb(79, 79, 79, .5);
+    backdrop-filter: blur();
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .6);
+}
+
+/* ------------------------------- */
+/* mouse over : cookie container   */
+/* ------------------------------- */
+.cookie-container:hover > .party > .player > button > .job {
+    outline: 1px solid #4F4F4F;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    transition: .5s;
+}
+
+.cookie-container:hover > .party > .player > button > .name {
+    margin-left: .5rem;
+
+    background: linear-gradient(102.83deg, rgba(213, 213, 213, 0.39) -98.71%, rgba(0, 0, 0, 0) 103.17%), rgba(0, 0, 0, 0.35);
+    outline: 1px solid rgb(79, 79, 79, 1);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/* ---------------------------- */
+/* mouse over : player          */
+/* ---------------------------- */
+.cookie-container > .party > .player > button:hover { /* mouse over: button */
+}
+
+.cookie-container > .party > .player > button:hover > .name { /* mouse over: player name */
+    background: linear-gradient(102.83deg, rgba(213, 213, 213, 0.39) -98.71%, rgba(0, 0, 0, 0) 103.17%), rgba(0, 0, 0, 0.85);
+    color: #FBD016;
+    outline: 1px solid #FBD016;
+}
+
+.cookie-container > .party > .player > button:hover > .job { /* mouse over: player job */
+    outline: 1px solid #FBD016;
+}

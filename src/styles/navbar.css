@@ -1,0 +1,18 @@
+nav {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+  
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: right;
+  }
+  
+  li {
+    padding: 1.5rem 1rem;
+    margin: 0.3rem;
+  
+    list-style: none;
+  }
+  

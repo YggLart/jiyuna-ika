@@ -1,0 +1,21 @@
+.imgBox-container {
+    width: 65vw;
+    max-height: 90vh;
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .img {
+    width: 100%;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .img-info {
+    display: none;
+  }

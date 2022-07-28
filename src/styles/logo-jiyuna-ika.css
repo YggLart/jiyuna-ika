@@ -1,0 +1,23 @@
+.logo-ika-img {
+    min-width: 5rem;
+    min-height: 4rem;
+  
+    background-image: url("https://raw.githubusercontent.com/YggLart/jiyuna-ika/b141a42d8ddd9ba90929292114583459a255717e/img/system/logo-jiyuna-ika.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .logo-ika-container > p {
+    max-width: 25rem;
+  
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.4rem;
+    font-family: var(--ff-barlow-condensed);
+    font-weight: 100;
+  
+    opacity: 0.5;
+  }
+  
