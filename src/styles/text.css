@@ -6,6 +6,7 @@
 .text > h3 {
     padding: 0 0 2rem;
     font-size: 3rem;
+    font-weight: 400;
     font-family: var(--ff-barlow-condensed);
     letter-spacing: 2px;
 

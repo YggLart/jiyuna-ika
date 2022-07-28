@@ -1,6 +1,5 @@
 .page-width { /* page container */ 
-    width: 80vw;
-    max-width: 1280px;
+    width: 1440px;
     position: relative;
   
     display: flex;
@@ -40,85 +39,4 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-  }
-  
- 
-  /* ------------------------------------ */
-  /* box with image                       */
-  /* ------------------------------------ */
-  .page-box > .box.card {
-    display: flex;
-    padding: 1rem;
-    transition: .3s;
-  }
-
-  .page-box > .box.card::before {
-    content:'';
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100%;
-    transition: .3s;
-    
-    position: absolute;
-    left: 2rem; bottom: 2rem;
-    background-color: rgb(var(--clr-dark), .9);
-    outline: 1px solid rgb(var(--clr-secondary));
-
-    transform: translateY(6rem);
-    opacity: 0;
-  }
-
-  .page-box > .box.card:hover::before {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .page-box > .box.card::after {
-    content:'➜';
-    position: absolute;
-    left: 3.1rem; bottom: 2.8rem;
-    border-radius: 100%;
-    transition: .3s;
-
-    font-size: 2rem;
-    color: rgb(var(--clr-secondary));
-    
-    transform: translateY(6rem);
-    opacity: 0;
-  }
-
-  .page-box > .box.card:hover::after {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .page-box > .box.card.reverse { flex-direction: row-reverse; }
-
-  .page-box .box.card > .text {
-    width: 100%;
-  }
-
-  .page-box > .box.card > .img {
-    border-radius: 1rem;
-    overflow: hidden;
-  }
-
-  .page-box > .box.card > .img > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  .page-box > .box.card:hover {
-    cursor: pointer;
-    outline: 1px solid rgb(var(--clr-secondary));
-    background: var(--bg-gradient-dark);
-    box-shadow: 0 .5rem .8rem rgba(0, 0, 0, .4);
-  }
-
-  .page-box > .box.card > .text > h3 { transition: .3s; }
-
-  .page-box > .box.card:hover > .text > h3 {
-    color: rgb(var(--clr-secondary));
   }

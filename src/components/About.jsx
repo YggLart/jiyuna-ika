@@ -20,22 +20,9 @@ export default function About() {
             <Img />
             <Text className="housing" />
           </div>
-          <div className="box card">
-            <Img />
-            <Text />
-          </div>
-          <div className="box card reverse">
-            <Img />
-            <Text />
-          </div>
-          <div className="box card">
-            <Img />
-            <Text />
-          </div>
-          <div className="box card reverse">
-            <Img />
-            <Text />
-          </div>
         </div>
     )
 }
+
+
+
